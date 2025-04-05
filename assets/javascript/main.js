@@ -36,57 +36,75 @@ window.addEventListener('scroll', function () {
         nav.classList.remove('shadow-lg');
     }
 });
-
-// Carousel functionality
+///////////////////////////////////////////
 function initCarousel() {
     const carousel = document.querySelector('.projects-carousel');
-    const cards = document.querySelectorAll('.project-card');
-    const prevBtn = document.querySelector('.carousel-btn:first-child');
-    const nextBtn = document.querySelector('.carousel-btn:last-child');
-    
-    if (!carousel || !cards.length || !prevBtn || !nextBtn) return;
-    
-    let currentIndex = 0;
-    const cardStyle = window.getComputedStyle(cards[0]);
-    const cardMargin = parseFloat(cardStyle.marginRight) + parseFloat(cardStyle.marginLeft);
-    const cardWidth = cards[0].offsetWidth + cardMargin;
+    const prevBtn = document.getElementById('carousel-prev');
+    const nextBtn = document.getElementById('carousel-next');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    if (!carousel || !prevBtn || !nextBtn) return;
+
+    let currentPosition = 0;
+    const cardWidth = projectCards[0].offsetWidth + 32; // 32px pour mx-4 (16px de chaque côté)
 
     function updateCarousel() {
-        carousel.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
-        updateButtons();
+        carousel.style.transform = `translateX(-${currentPosition}px)`;
+        prevBtn.disabled = currentPosition === 0;
+        nextBtn.disabled = currentPosition >= carousel.scrollWidth - carousel.clientWidth;
     }
 
-    function updateButtons() {
-        prevBtn.disabled = currentIndex === 0;
-        nextBtn.disabled = currentIndex >= cards.length - 1;
-    }
-
-    prevBtn.addEventListener('click', () => {
-        if (currentIndex > 0) {
-            currentIndex--;
-            updateCarousel();
-        }
+    prevBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        currentPosition = Math.max(currentPosition - cardWidth, 0);
+        updateCarousel();
     });
 
-    nextBtn.addEventListener('click', () => {
-        if (currentIndex < cards.length - 1) {
-            currentIndex++;
-            updateCarousel();
-        }
+    nextBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        currentPosition = Math.min(currentPosition + cardWidth, carousel.scrollWidth - carousel.clientWidth);
+        updateCarousel();
     });
 
-    function handleResize() {
-        const newCardWidth = cards[0].offsetWidth + cardMargin;
-        carousel.style.transform = `translateX(-${currentIndex * newCardWidth}px)`;
-    }
-
-    window.addEventListener('resize', handleResize);
-
-    // Initialisation
-    updateButtons();
+    updateCarousel();
 }
 
-document.addEventListener('DOMContentLoaded', initCarousel);
+document.addEventListener('DOMContentLoaded', function () {
+    initCarousel();      // Doit venir en premier
+    initProjectsDetails(); // En second
+    initTimeline();
+    const carousel = document.querySelector('.projects-carousel');
+    const prevBtn = document.getElementById('carousel-prev');
+    const nextBtn = document.getElementById('carousel-next');
+    const projects = document.querySelectorAll('.project-card');
+
+    if (!carousel || !prevBtn || !nextBtn || projects.length === 0) return;
+
+    let currentPosition = 0;
+    const projectWidth = projects[0].offsetWidth + 32; // 32px pour les marges (mx-4 = 16px de chaque côté)
+    const maxPosition = (projects.length - 1) * projectWidth;
+
+    function updateCarousel() {
+        carousel.style.transform = `translateX(-${currentPosition}px)`;
+
+        // Désactive les boutons quand on atteint les limites
+        prevBtn.disabled = currentPosition === 0;
+        nextBtn.disabled = currentPosition >= maxPosition;
+    }
+
+    prevBtn.addEventListener('click', function () {
+        currentPosition = Math.max(currentPosition - projectWidth, 0);
+        updateCarousel();
+    });
+
+    nextBtn.addEventListener('click', function () {
+        currentPosition = Math.min(currentPosition + projectWidth, maxPosition);
+        updateCarousel();
+    });
+
+    // Initialisation
+    updateCarousel();
+});
 
 // Projects details functionality
 function initProjectsDetails() {
@@ -221,7 +239,7 @@ function initProjectsDetails() {
                 },
             ]
         },
-        // ... (ajoutez ici les autres projets de la même manière)
+        //  ici les autres projets de la même manière
     };
 
     // 2. Sélection des éléments DOM
@@ -273,12 +291,28 @@ function initProjectsDetails() {
         });
     });
 
-    document.addEventListener('click', function () {
-        detailsPanel.classList.add('hidden');
-    });
+    // Utilisez la délégation d'événements
+    document.addEventListener('click', function (e) {
+        // Gère les clics sur les cartes
+        const card = e.target.closest('.project-card');
+        if (card) {
+            e.stopPropagation();
+            const projectId = card.getAttribute('data-project');
+            const project = projects[projectId];
 
-    detailsPanel.addEventListener('click', function (e) {
-        e.stopPropagation();
+            if (!project) return;
+
+            // Mettez à jour le panel de détails...
+            document.getElementById('project-title').textContent = project.title;
+            // ... (le reste de votre code existant)
+
+            document.querySelector('.project-details').classList.remove('hidden');
+        }
+
+        // Gère les clics en dehors pour fermer le panel
+        else if (!e.target.closest('.project-details')) {
+            document.querySelector('.project-details').classList.add('hidden');
+        }
     });
 }
 
@@ -303,7 +337,7 @@ function initTimeline() {
     const timelineItems = document.querySelectorAll('.timeline-item');
     const experienceSection = document.getElementById('experience');
     const educationSection = document.getElementById('education');
-    
+
     if (!timelineItems.length) return;
 
     function isInViewport(element) {
@@ -313,18 +347,18 @@ function initTimeline() {
             rect.bottom >= (window.innerHeight * 0.20)
         );
     }
-    
+
     function animateTimelineItems() {
         const experienceRect = experienceSection?.getBoundingClientRect();
         const educationRect = educationSection?.getBoundingClientRect();
-        
-        const isInExperience = experienceRect ? 
+
+        const isInExperience = experienceRect ?
             (experienceRect.top <= window.innerHeight && experienceRect.bottom >= 0) : false;
-        const isInEducation = educationRect ? 
+        const isInEducation = educationRect ?
             (educationRect.top <= window.innerHeight && educationRect.bottom >= 0) : false;
-        
+
         if (!isInExperience && !isInEducation) return;
-        
+
         timelineItems.forEach((item, index) => {
             if (isInViewport(item)) {
                 setTimeout(() => {
@@ -335,13 +369,13 @@ function initTimeline() {
             }
         });
     }
-    
+
     window.addEventListener('scroll', animateTimelineItems);
     animateTimelineItems();
 }
 
 // Initialize everything when DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     initCarousel();
     initProjectsDetails();
     initTimeline();
