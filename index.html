@@ -544,9 +544,15 @@
                         action="https://formsubmit.co/youcefaddou@gmail.com" method="POST">
                         <input type="hidden" name="_honey" value=""> <!-- Piège à bots -->
                         <input type="hidden" name="_template" value="box"> <!-- Format email -->
-                        <!-- Redirection vers votre page merci.html -->
+                        <!-- Ligne magique pour VOTRE page de remerciement -->
                         <input type="hidden" name="_next" value="https://youcef-addou.netlify.app/pages/merci.html">
+
+                        <!-- Désactive le CAPTCHA -->
                         <input type="hidden" name="_captcha" value="false">
+
+                        <!-- Anti-spam invisible -->
+                        <input type="text" name="_honey" style="display:none">
+                        
                         <div class="mb-4">
                             <label for="name" class="block text-gray-700 mb-2">Nom</label>
                             <input type="text" id="name" name="nom"
