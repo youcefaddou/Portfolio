@@ -102,11 +102,11 @@ document.addEventListener('DOMContentLoaded', function () {
         updateCarousel();
     });
 
-    // Initialisation
+    //initialisation
     updateCarousel();
 });
 
-// Projects details functionality
+// Détails projets à coté de la video
 function initProjectsDetails() {
     const projects = {
         1: {
@@ -239,10 +239,10 @@ function initProjectsDetails() {
                 },
             ]
         },
-        //  ici les autres projets de la même manière
+        //  ici les autres projets 
     };
 
-    // 2. Sélection des éléments DOM
+    // selection des éléments DOM
     const projectCards = document.querySelectorAll('.project-card');
     const detailsPanel = document.querySelector('.project-details');
     const projectTitle = document.getElementById('project-title');
@@ -291,9 +291,9 @@ function initProjectsDetails() {
         });
     });
 
-    // Utilisez la délégation d'événements
+    //utilise la délégation d'événements
     document.addEventListener('click', function (e) {
-        // Gère les clics sur les cartes
+        //gère les clics sur les cartes
         const card = e.target.closest('.project-card');
         if (card) {
             e.stopPropagation();
@@ -302,10 +302,8 @@ function initProjectsDetails() {
 
             if (!project) return;
 
-            // Mettez à jour le panel de détails...
+            // Mettez à jour le panel de détails
             document.getElementById('project-title').textContent = project.title;
-            // ... (le reste de votre code existant)
-
             document.querySelector('.project-details').classList.remove('hidden');
         }
 

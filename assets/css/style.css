@@ -5,12 +5,10 @@ body {
     scroll-behavior: smooth;
 }
 
-/* Hero Section */
 .hero-gradient {
     background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #93c5fd 100%);
 }
 
-/* Project Cards */
 .project-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -20,7 +18,6 @@ body {
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
-/* Skills Badges */
 .skill-badge {
     transition: all 0.3s ease;
 }
@@ -29,7 +26,6 @@ body {
     transform: scale(1.05);
 }
 
-/* Navigation Links */
 .nav-link {
     position: relative;
 }
@@ -49,7 +45,6 @@ body {
     width: 100%;
 }
 
-/* Timeline Items */
 .timeline-item::before {
     content: '';
     position: absolute;
@@ -65,11 +60,10 @@ body {
     display: none;
 }
 
-/* Projects Carousel */
 .projects-carousel-container {
     overflow: hidden;
     position: relative;
-    padding: 0 50px; /* Espace pour les flèches */
+    padding: 0 50px; 
 }
 
 .projects-carousel {
@@ -86,7 +80,6 @@ body {
     min-width: 0;
 }
 
-/* Carousel Navigation Buttons */
 .carousel-btn {
     position: absolute;
     top: 50%;
@@ -127,12 +120,11 @@ body {
     font-size: 1.25rem;
 }
 
-/* Project Details */
+
 .project-details {
     transition: all 0.3s ease;
 }
 
-/* Video Styling */
 video {
     max-width: 100%;
     height: auto;
@@ -146,16 +138,15 @@ video {
     object-fit: contain;
 }
 
-/* Timeline Animation */
 .timeline-item {
     opacity: 0.5;
     transform: scale(0.95);
-    transition: all 0.5s ease;
+    transition: all 0.5s ease-in-out;
 }
 
 .timeline-item::before {
     transform: scale(1);
-    transition: all 0.5s ease;
+    transition: all 0.5s ease-in-out;
     box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2);
 }
 
@@ -183,7 +174,6 @@ video {
     background: linear-gradient(to bottom, #3b82f6, #e5e7eb);
 }
 
-/* Responsive Adjustments */
 @media (max-width: 1024px) {
     .project-card {
         flex: 0 0 calc(33.333% - 32px);

@@ -11,37 +11,45 @@
 </head>
 
 <body class="bg-gray-50 text-gray-800">
-    <!-- Navigation -->
     <nav class="bg-white shadow-md fixed w-full z-10">
         <div class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-blue-600">A.Y Dev</a>
-            <div class="hidden md:flex space-x-8">
-                <a href="#home" class="nav-link text-gray-700 hover:text-blue-600">Accueil</a>
-                <a href="#about" class="nav-link text-gray-700 hover:text-blue-600">À propos</a>
-                <a href="#skills" class="nav-link text-gray-700 hover:text-blue-600">Compétences</a>
-                <a href="#projects" class="nav-link text-gray-700 hover:text-blue-600">Projets</a>
-                <a href="#experience" class="nav-link text-gray-700 hover:text-blue-600">Expérience</a>
-                <a href="#education" class="nav-link text-gray-700 hover:text-blue-600">Éducation</a>
-                <a href="#contact" class="nav-link text-gray-700 hover:text-blue-600">Contact</a>
+            <a href="#" class="text-2xl font-bold text-blue-600">&lt;/&gt; A.Y Dev</a>
+            <div class="hidden md:flex items-center space-x-5"> 
+                <a href="#home" class="px-3 py-2 text-gray-700 hover:text-blue-600 transition">Accueil</a>
+                <a href="#about" class="px-3 py-2 text-gray-700 hover:text-blue-600 transition">À propos</a>
+                <a href="#skills" class="px-3 py-2 text-gray-700 hover:text-blue-600 transition">Compétences</a>
+                <a href="#projects" class="px-3 py-2 text-gray-700 hover:text-blue-600 transition">Projets</a>
+                <a href="#experience" class="px-3 py-2 text-gray-700 hover:text-blue-600 transition">Expérience</a>
+                <a href="#education" class="px-3 py-2 text-gray-700 hover:text-blue-600 transition">Éducation</a>
+                <a href="#contact" class="px-3 py-2 text-gray-700 hover:text-blue-600 transition">Contact</a>
+                <a href="./assets/files/Youcef_Addou_Dev_FullStack_Alternance.pdf" download
+                   class="ml-4 bg-blue-600 hover:bg-blue-900 text-white px-4 py-2 rounded-md flex items-center transition">
+                   <i class="fas fa-download mr-2"></i> CV
+                </a>
             </div>
+            <!-- Menu mobile -->
             <button class="md:hidden focus:outline-none" id="menu-toggle">
                 <i class="fas fa-bars text-xl"></i>
             </button>
         </div>
-        <!-- Mobile menu -->
+        
+        <!-- Contenu du menu mobile -->
         <div class="md:hidden hidden bg-white w-full px-6 py-3" id="mobile-menu">
-            <div class="flex flex-col space-y-4">
-                <a href="#home" class="text-gray-700 hover:text-blue-600">Accueil</a>
-                <a href="#about" class="text-gray-700 hover:text-blue-600">À propos</a>
-                <a href="#skills" class="text-gray-700 hover:text-blue-600">Compétences</a>
-                <a href="#projects" class="text-gray-700 hover:text-blue-600">Projets</a>
-                <a href="#experience" class="text-gray-700 hover:text-blue-600">Expérience</a>
-                <a href="#education" class="nav-link text-gray-700 hover:text-blue-600">Éducation</a>
-                <a href="#contact" class="text-gray-700 hover:text-blue-600">Contact</a>
+            <div class="flex flex-col space-y-3">
+                <a href="#home" class="py-2 text-gray-700 hover:text-blue-600">Accueil</a>
+                <a href="#about" class="py-2 text-gray-700 hover:text-blue-600">À propos</a>
+                <a href="#skills" class="py-2 text-gray-700 hover:text-blue-600">Compétences</a>
+                <a href="#projects" class="py-2 text-gray-700 hover:text-blue-600">Projets</a>
+                <a href="#experience" class="py-2 text-gray-700 hover:text-blue-600">Expérience</a>
+                <a href="#education" class="py-2 text-gray-700 hover:text-blue-600">Éducation</a>
+                <a href="#contact" class="py-2 text-gray-700 hover:text-blue-600">Contact</a>
+                <a href="./assets/files/Youcef_Addou_Dev_FullStack_Alternance.pdf" download
+                   class="mt-2 bg-blue-600 text-white px-4 py-2 rounded-md flex items-center justify-center">
+                   <i class="fas fa-download mr-2"></i> Télécharger mon CV
+                </a>
             </div>
         </div>
     </nav>
-
     <!-- Hero Section -->
     <section id="home" class="hero-gradient text-white pt-24 pb-16 md:pt-32 md:pb-24">
         <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
@@ -69,14 +77,13 @@
             </div>
         </div>
     </section>
-
     <!-- About Section -->
     <section id="about" class="py-16 bg-white">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl font-bold text-center mb-12">À propos de moi</h2>
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
-                    <p class="text-lg mb-4">Je m'appelle Youcef Addou, j'ai 34 ans et je suis passionné par le
+                    <p class="text-lg mb-4">Je m'appelle Youcef, j'ai 34 ans et je suis passionné par le
                         développement web. Après une première expérience professionnelle dans le domaine commercial et
                         entrepreneurial, j'ai décidé de me reconvertir dans le développement web, un domaine qui m'a
                         toujours attiré.</p>
@@ -112,12 +119,10 @@
             </div>
         </div>
     </section>
-
     <!-- Skills Section -->
     <section id="skills" class="py-16 bg-gray-50">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl font-bold text-center mb-12">Mes compétences</h2>
-
             <div class="mb-12">
                 <h3 class="text-xl font-semibold mb-6 text-blue-600 flex items-center">
                     <i class="fas fa-laptop-code mr-3"></i> Frontend
@@ -149,7 +154,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="mb-12">
                 <h3 class="text-xl font-semibold mb-6 text-blue-600 flex items-center">
                     <i class="fas fa-server mr-3"></i> Backend
@@ -173,7 +177,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="mb-12">
                 <h3 class="text-xl font-semibold mb-6 text-blue-600 flex items-center">
                     <i class="fas fa-database mr-3"></i> Bases de données
@@ -193,7 +196,6 @@
                     </div>
                 </div>
             </div>
-
             <div>
                 <h3 class="text-xl font-semibold mb-6 text-blue-600 flex items-center">
                     <i class="fas fa-tools mr-3"></i> Outils & Méthodologies
@@ -227,12 +229,10 @@
             </div>
         </div>
     </section>
-
     <!-- Projects Section -->
     <section id="projects" class="py-16 bg-white">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl font-bold text-center mb-12">Mes projets</h2>
-
             <div class="projects-carousel-container relative overflow-hidden">
                 <!-- Carousel Navigation -->
                 <button id="carousel-prev"
@@ -245,7 +245,6 @@
                     aria-label="Next project">
                     <i class="fas fa-chevron-right text-blue-600 text-lg"></i>
                 </button>
-
                 <div class="projects-carousel flex">
                     <!-- Project 1 -->
                     <div class="project-card flex-shrink-0 w-[300px] mx-4 cursor-pointer" data-project="1">
@@ -257,7 +256,6 @@
                             <h3 class="text-xl font-semibold mb-2">The Game of Life</h3>
                         </div>
                     </div>
-
                     <!-- Project 2 -->
                     <div class="project-card flex-shrink-0 w-[300px] mx-4 cursor-pointer" data-project="2">
                         <div class="h-48 bg-green-100 flex items-center justify-center rounded-t-xl overflow-hidden">
@@ -268,7 +266,6 @@
                             <h3 class="text-xl font-semibold mb-2">Maze Cat Runner - PHP</h3>
                         </div>
                     </div>
-
                     <!-- Project 3 -->
                     <div class="project-card flex-shrink-0 w-[300px] mx-4 cursor-pointer" data-project="3">
                         <div class="h-48 bg-purple-100 flex items-center justify-center rounded-t-xl overflow-hidden">
@@ -279,7 +276,6 @@
                             <h3 class="text-xl font-semibold mb-2">The Hangman Game</h3>
                         </div>
                     </div>
-
                     <!-- Project 4 -->
                     <div class="project-card flex-shrink-0 w-[300px] mx-4 cursor-pointer" data-project="4">
                         <div class="h-48 bg-yellow-100 flex items-center justify-center rounded-t-xl overflow-hidden">
@@ -290,7 +286,6 @@
                             <h3 class="text-xl font-semibold mb-2">Connect 4 (Puissance 4)</h3>
                         </div>
                     </div>
-
                     <!-- Project 5 -->
                     <div class="project-card flex-shrink-0 w-[300px] mx-4 cursor-pointer" data-project="5">
                         <div class="h-48 bg-red-100 flex items-center justify-center rounded-t-xl overflow-hidden">
@@ -303,7 +298,6 @@
                     </div>
                 </div>
             </div>
-
             <!-- Project Details Panel -->
             <div class="project-details hidden mt-8 bg-gray-50 p-8 rounded-xl shadow-md">
                 <div class="flex flex-col md:flex-row gap-8">
@@ -360,13 +354,10 @@
             </div>
         </div>
     </section>
-
-
     <!-- Experience & Education Section -->
     <section id="experience" class="py-16 bg-gray-50 relative">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl font-bold text-center mb-12">Parcours professionnel</h2>
-
             <div class="max-w-3xl mx-auto">
                 <!-- Experience 1 -->
                 <div class="relative pl-8 mb-8 timeline-item">
@@ -384,8 +375,6 @@
                         </ul>
                     </div>
                 </div>
-
-
                 <!-- Experience 2 -->
                 <div class="relative pl-8 mb-8 timeline-item">
                     <div class="bg-white p-6 rounded-xl shadow-md">
@@ -422,7 +411,6 @@
                         </ul>
                     </div>
                 </div>
-
                 <!-- Experience 4 -->
                 <div class="relative pl-8 mb-8 timeline-item">
                     <div class="bg-white p-6 rounded-xl shadow-md">
@@ -444,12 +432,10 @@
             </div>
         </div>
     </section>
-
     <!-- Experience & Education Section -->
     <section id="education" class="py-16 bg-white relative">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl font-bold text-center mb-12">Éducation et Formations</h2>
-
             <div class="max-w-3xl mx-auto">
                 <!-- Education 1 -->
                 <div class="relative pl-8 mb-8 timeline-item">
@@ -486,17 +472,6 @@
                                 2013</span>
                         </div>
                         <p class="text-gray-600 mb-2">Université d'Aix-Marseille</p>
-                    </div>
-                </div>
-                <!-- Education 4 -->
-                <div class="relative pl-8 mb-8 timeline-item">
-                    <div class="bg-gray-50 p-6 rounded-xl shadow-md">
-                        <div class="flex justify-between items-start mb-2">
-                            <h3 class="text-xl font-semibold">Baccalauréat Économie et Social</h3>
-                            <span class="bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full">2007 -
-                                2010</span>
-                        </div>
-                        <p class="text-gray-600 mb-2">Lycée Saint-Charles Marseille</p>
                     </div>
                 </div>
             </div>
@@ -536,6 +511,14 @@
                                     class="text-blue-600 hover:underline">github.com/youcefaddou</a>
                             </div>
                         </div>
+                        <div class="mt-6">
+                            <a href="./assets/files/Youcef_Addou_Dev_FullStack_Alternance.pdf" 
+                               download="CV_Youcef_Addou_Developpeur_FullStack.pdf"
+                               class="bg-blue-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300 inline-flex items-center">
+                               <i class="fas fa-download mr-2"></i> Télécharger mon CV
+                            </a>
+                            <p class="text-sm text-gray-500 mt-2">PDF - 103 Ko</p>
+                          </div>
                     </div>
                 </div>
 
@@ -544,15 +527,12 @@
                         action="https://formsubmit.co/youcefaddou@gmail.com" method="POST">
                         <input type="hidden" name="_honey" value=""> <!-- Piège à bots -->
                         <input type="hidden" name="_template" value="box"> <!-- Format email -->
-                        <!-- Ligne magique pour VOTRE page de remerciement -->
-                        <input type="hidden" name="_next" value="https://youcef-addou.netlify.app/pages/merci.html">
 
+                        <input type="hidden" name="_next" value="https://youcef-addou.netlify.app/pages/merci.html">
                         <!-- Désactive le CAPTCHA -->
                         <input type="hidden" name="_captcha" value="false">
-
                         <!-- Anti-spam invisible -->
                         <input type="text" name="_honey" style="display:none">
-                        
                         <div class="mb-4">
                             <label for="name" class="block text-gray-700 mb-2">Nom</label>
                             <input type="text" id="name" name="nom"
@@ -595,7 +575,7 @@
         <div class="container mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="mb-4 md:mb-0">
-                    <h3 class="text-2xl font-bold">A.Y Dev</h3>
+                    <h3 class="text-2xl font-bold">&lt;/&gt; A.Y Dev</h3>
                     <p class="text-gray-400">Développeur Full-Stack JavaScript</p>
                 </div>
 
@@ -614,7 +594,7 @@
                 </div>
 
                 <div class="text-gray-400 text-sm">
-                    <p>&copy; 2024 A.Y Dev Portfolio. Tous droits réservés.</p>
+                    <p>&copy; 2024 &lt;/&gt; A.Y Dev Portfolio. Tous droits réservés.</p>
                 </div>
             </div>
         </div>
