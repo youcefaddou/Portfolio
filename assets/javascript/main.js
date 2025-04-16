@@ -175,7 +175,7 @@ function initProjectsDetails() {
             technologies: ["PHP", "HTML5 Canvas", "CSS Animations"],
             demoContent: `
                 <video controls autoplay loop muted class="w-fit-content h-full object-cover rounded-xl">
-                    <source src="./assets/videos/gameoflifevideo.webm" type="video/webm">
+                    <source src="./assets/videos/maze.webm" type="video/webm">
                     Votre navigateur ne supporte pas les vidéos HTML5
                 </video>
             `,
