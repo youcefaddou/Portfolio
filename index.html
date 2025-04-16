@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gray-50 text-gray-800" data-theme="light">
     <nav class="bg-white shadow-md fixed w-full z-10">
         <div class="container mx-auto px-6 py-3 flex justify-between items-center">
             <a href="#" class="text-2xl font-bold text-blue-600">&lt;/&gt; A.Y Dev</a>
@@ -26,6 +26,10 @@
                    class="ml-4 bg-blue-600 hover:bg-blue-900 text-white px-4 py-2 rounded-md flex items-center transition">
                    <i class="fas fa-download mr-2"></i> CV
                 </a>
+                <!-- Dark mode toggle -->
+                <button id="theme-toggle" class="ml-4 text-gray-700 hover:text-blue-600 transition">
+                    <i id="theme-icon" class="fas fa-moon text-xl"></i>
+                </button>
             </div>
             <!-- Menu mobile -->
             <button class="md:hidden focus:outline-none" id="menu-toggle">
@@ -60,7 +64,7 @@
                     Actuellement en formation pour perfectionner mes compétences en développement web.</p>
                 <div class="flex space-x-4">
                     <a href="#contact"
-                        class="bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition duration-300">Me
+                        class="bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition duration-300 ">Me
                         contacter</a>
                     <a href="#projects"
                         class="border-2 border-white text-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-blue-600 transition duration-300">Voir
@@ -598,13 +602,13 @@
                         class="text-gray-400 hover:text-white transition duration-300">
                         <i class="fab fa-linkedin text-xl"></i>
                     </a>
-                    <a href="https://x.com/JohnHash3" class="text-gray-400 hover:text-white transition duration-300">
-                        <i class="fab fa-twitter text-xl"></i>
+                    <a href="https://x.com/JohnHash3" class="text-gray-400  transition duration-300 flex items-center">
+                        <img src="./assets/images/x-logo.svg" alt="X logo" class="h-6 w-6 fill-current hover:text-white-900">
                     </a>
                 </div>
 
                 <div class="text-gray-400 text-sm">
-                    <p>&copy; 2024 &lt;/&gt; A.Y Dev Portfolio. Tous droits réservés.</p>
+                    <p>&copy; 2025 &lt;/&gt; A.Y Dev Portfolio. Tous droits réservés.</p>
                 </div>
             </div>
         </div>

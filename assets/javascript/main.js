@@ -36,6 +36,21 @@ window.addEventListener('scroll', function () {
         nav.classList.remove('shadow-lg');
     }
 });
+
+// Theme toggle
+document.getElementById('theme-toggle').addEventListener('click', function () {
+    const body = document.body;
+    const themeIcon = document.getElementById('theme-icon');
+
+    if (body.getAttribute('data-theme') === 'light') {
+        body.setAttribute('data-theme', 'dark');
+        themeIcon.classList.replace('fa-moon', 'fa-sun');
+    } else {
+        body.setAttribute('data-theme', 'light');
+        themeIcon.classList.replace('fa-sun', 'fa-moon');
+    }
+});
+
 ///////////////////////////////////////////
 function initCarousel() {
     const carousel = document.querySelector('.projects-carousel');
