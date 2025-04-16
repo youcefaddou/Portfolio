@@ -109,7 +109,8 @@ document.addEventListener('DOMContentLoaded', function () {
 // Détails projets à coté de la video
 function initProjectsDetails() {
     const projects = {
-        1: {
+
+        2: {
             title: "The Game of Life",
             description: "Implémentation interactive de l'automate cellulaire de Conway en JavaScript vanilla avec HTML5 Canvas.",
             features: [
@@ -139,7 +140,30 @@ function initProjectsDetails() {
                 }
             ]
         },
-        2: {
+        1: {
+            title: "Formulaire de Contact",
+            description: "Application web complète pour la gestion des disponibilités et des coordonnées des utilisateurs, avec un back-end basé sur Express.js et une base de données MySQL.",
+            features: [
+                "Formulaire de contact avec validation des champs (nom, prénom, email, téléphone)",
+                "Sélection des disponibilités (jour, heure, minutes)",
+                "Envoi des données au serveur via une requête POST",
+                "Stockage des données dans une base de données MySQL",
+                "Interface utilisateur moderne avec React et TailwindCSS"
+            ],
+            technologies: ["React", "TailwindCSS", "Express.js", "MySQL", "Prisma"],
+            demoContent: `
+                <img src="./assets/images/Capture.PNG" alt="Aperçu du projet Majordhomm" class="w-fit-content h-full object-cover rounded-xl">
+            `,
+            demoBg: "bg-purple-100",
+            links: [
+                {
+                    url: "https://github.com/youcefaddou/Majordhomm-test_Youcef",
+                    icon: "fab fa-github",
+                    text: "Code"
+                },
+            ]
+        },
+        3: {
             title: "The Maze Cat Runner - PHP",
             description: "Création d'un jeu de labyrinthe dynamique avec un système de vies en PHP avec HTML5 Canvas.",
             features: [
@@ -164,7 +188,7 @@ function initProjectsDetails() {
                 },
             ]
         },
-        3: {
+        4: {
             title: "The Hangman",
             description: "Création d'un jeu du pendu dynamique avec un système de vies en JavaScript avec HTML5 et CSS.",
             features: [
@@ -189,7 +213,7 @@ function initProjectsDetails() {
                 },
             ]
         },
-        4: {
+        5: {
             title: "Puissance 4",
             description: "Création d'un jeu Puissance 4 dynamique avec deux modes de jeu en JavaScript avec HTML5 et CSS.",
             features: [
@@ -214,7 +238,7 @@ function initProjectsDetails() {
                 },
             ]
         },
-        5: {
+        6: {
             title: "Uni Handler",
             description: "Création d'une application de gestion d'école via API, en JavaScript avec HTML5 et CSS.",
             features: [
