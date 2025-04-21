@@ -1,10 +1,8 @@
-// Mobile menu toggle
 document.getElementById('menu-toggle').addEventListener('click', function () {
     const mobileMenu = document.getElementById('mobile-menu');
     mobileMenu.classList.toggle('hidden');
 });
 
-// Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -18,7 +16,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 behavior: 'smooth'
             });
 
-            // Close mobile menu if open
             const mobileMenu = document.getElementById('mobile-menu');
             if (!mobileMenu.classList.contains('hidden')) {
                 mobileMenu.classList.add('hidden');
@@ -27,7 +24,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Add shadow to navbar on scroll
+
 window.addEventListener('scroll', function () {
     const nav = document.querySelector('nav');
     if (window.scrollY > 50) {
@@ -52,76 +49,74 @@ document.getElementById('theme-toggle').addEventListener('click', function () {
 });
 
 ///////////////////////////////////////////
-function initCarousel() {
-    const carousel = document.querySelector('.projects-carousel');
-    const prevBtn = document.getElementById('carousel-prev');
-    const nextBtn = document.getElementById('carousel-next');
-    const projectCards = document.querySelectorAll('.project-card');
-
-    if (!carousel || !prevBtn || !nextBtn) return;
-
-    let currentPosition = 0;
-    const cardWidth = projectCards[0].offsetWidth + 32; // 32px pour mx-4 (16px de chaque côté)
-
-    function updateCarousel() {
-        carousel.style.transform = `translateX(-${currentPosition}px)`;
-        prevBtn.disabled = currentPosition === 0;
-        nextBtn.disabled = currentPosition >= carousel.scrollWidth - carousel.clientWidth;
-    }
-
-    prevBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        currentPosition = Math.max(currentPosition - cardWidth, 0);
-        updateCarousel();
+function updateCoverflowCarousel(centerIndex) {
+    const cards = document.querySelectorAll('.project-card');
+    cards.forEach((card, i) => {
+        card.classList.remove('center', 'left', 'right', 'far-left', 'far-right');
+        card.style.display = '';
+        if (i === centerIndex) {
+            card.classList.add('center');
+        } else if (i === centerIndex - 1) {
+            card.classList.add('left');
+        } else if (i === centerIndex + 1) {
+            card.classList.add('right');
+        } else if (i === centerIndex - 2) {
+            card.classList.add('far-left');
+        } else if (i === centerIndex + 2) {
+            card.classList.add('far-right');
+        } else {
+            card.style.display = 'none';
+        }
     });
-
-    nextBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        currentPosition = Math.min(currentPosition + cardWidth, carousel.scrollWidth - carousel.clientWidth);
-        updateCarousel();
-    });
-
-    updateCarousel();
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-    initCarousel();      // Doit venir en premier
-    initProjectsDetails(); // En second
-    initTimeline();
-    const carousel = document.querySelector('.projects-carousel');
+function initCoverflowCarousel() {
+    const cards = document.querySelectorAll('.project-card');
+    if (!cards.length) return;
+
+    let centerIndex = 0;
+
+    updateCoverflowCarousel(centerIndex);
+
+    // Navigation
     const prevBtn = document.getElementById('carousel-prev');
     const nextBtn = document.getElementById('carousel-next');
-    const projects = document.querySelectorAll('.project-card');
 
-    if (!carousel || !prevBtn || !nextBtn || projects.length === 0) return;
-
-    let currentPosition = 0;
-    const projectWidth = projects[0].offsetWidth + 32; // 32px pour les marges (mx-4 = 16px de chaque côté)
-    const maxPosition = (projects.length - 1) * projectWidth;
-
-    function updateCarousel() {
-        carousel.style.transform = `translateX(-${currentPosition}px)`;
-
-        // Désactive les boutons quand on atteint les limites
-        prevBtn.disabled = currentPosition === 0;
-        nextBtn.disabled = currentPosition >= maxPosition;
+    function updateButtons() {
+        prevBtn.disabled = centerIndex === 0;
+        nextBtn.disabled = centerIndex === cards.length - 1;
     }
 
     prevBtn.addEventListener('click', function () {
-        currentPosition = Math.max(currentPosition - projectWidth, 0);
-        updateCarousel();
+        if (centerIndex > 0) {
+            centerIndex--;
+            updateCoverflowCarousel(centerIndex);
+            updateButtons();
+        }
     });
 
     nextBtn.addEventListener('click', function () {
-        currentPosition = Math.min(currentPosition + projectWidth, maxPosition);
-        updateCarousel();
+        if (centerIndex < cards.length - 1) {
+            centerIndex++;
+            updateCoverflowCarousel(centerIndex);
+            updateButtons();
+        }
     });
 
-    //initialisation
-    updateCarousel();
-});
+    cards.forEach((card, i) => {
+        card.addEventListener('click', function (e) {
+            if (i !== centerIndex) {
+                e.stopPropagation();
+                centerIndex = i;
+                updateCoverflowCarousel(centerIndex);
+                updateButtons();
+            }
+        });
+    });
 
-// Détails projets à coté de la video
+    updateButtons();
+}
+
 function initProjectsDetails() {
     const projects = {
 
@@ -301,7 +296,6 @@ function initProjectsDetails() {
 
             if (!project) return;
 
-            // Update details panel
             projectTitle.textContent = project.title;
             projectDescription.textContent = project.description;
 
@@ -411,13 +405,11 @@ function initTimeline() {
     animateTimelineItems();
 }
 
-// Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', function () {
-    initCarousel();
+    initCoverflowCarousel();
     initProjectsDetails();
     initTimeline();
 
-    // Video size adjustment
     const projectDemoVideo = document.querySelector('#project-demo video');
     if (projectDemoVideo) {
         projectDemoVideo.addEventListener('loadedmetadata', adjustVideoSize);
