@@ -1,3 +1,5 @@
+"use strict";
+
 document.getElementById('menu-toggle').addEventListener('click', function () {
     const mobileMenu = document.getElementById('mobile-menu');
     mobileMenu.classList.toggle('hidden');
@@ -120,6 +122,80 @@ function initCoverflowCarousel() {
 function initProjectsDetails() {
     const projects = {
 
+        7: {
+            title: "Landing Page NexaDigital",
+            description: "Landing page moderne pour agence digitale avec formulaire de contact connecté à une base MySQL, animations au scroll, et gestion des abonnements à la newsletter.",
+            features: [
+                "Formulaire de contact avec validation (nom, email, téléphone, message)",
+                "Enregistrement des messages dans la base de données MySQL via Express.js et Prisma",
+                "Animations d’apparition au scroll (React hooks + CSS)",
+                "Section newsletter prête à connecter au backend",
+                "Interface responsive et moderne avec React et TailwindCSS"
+            ],
+            technologies: ["React", "TailwindCSS", "Express.js", "MySQL", "Prisma"],
+            demoContent: `
+                <video controls autoplay loop muted class="w-fit-content h-full object-cover rounded-xl" loading="lazy">
+                    <source src="./assets/videos/nexadigitalvideo.mp4" type="video/mp4">
+                    Votre navigateur ne supporte pas les vidéos HTML5
+                </video>
+            `,
+            demoBg: "bg-primary bg-opacity-10",
+            links: [
+                {
+                    url: "https://github.com/youcefaddou/NexaDigital.git",
+                    icon: "fab fa-github",
+                    text: "Code"
+                },
+            ]
+        },
+        1: {
+            title: "Formulaire de Contact",
+            description: "Application web complète pour la gestion des disponibilités et des coordonnées des utilisateurs, avec un back-end basé sur Express.js et une base de données MySQL.",
+            features: [
+                "Formulaire de contact avec validation des champs (nom, prénom, email, téléphone)",
+                "Sélection des disponibilités (jour, heure, minutes)",
+                "Envoi des données au serveur via une requête POST",
+                "Stockage des données dans une base de données MySQL",
+                "Interface utilisateur moderne avec React et TailwindCSS"
+            ],
+            technologies: ["React", "TailwindCSS", "Express.js", "MySQL", "Prisma"],
+            demoContent: `
+                <img src="./assets/images/Capture.PNG" alt="Aperçu du projet Majordhomm" class="w-fit-content h-full object-cover rounded-xl" loading="lazy">
+            `,
+            demoBg: "bg-purple-100",
+            links: [
+                {
+                    url: "https://github.com/youcefaddou/Majordhomm-test_Youcef",
+                    icon: "fab fa-github",
+                    text: "Code"
+                },
+            ]
+        },
+        6: {
+            title: "Uni Handler",
+            description: "Création d'une application de gestion d'école via API, en JavaScript avec HTML5 et CSS.",
+            features: [
+                "Gestion des promotions avec possibilité d'ajout, de modification et de suppression",
+                "Gestion des étudiants avec possibilité d'ajout, de modification et de suppression",
+                "Manipulation de données via une API custom spécialement conçue pour le projet",
+                "Projet collaboratif avec utilisation de GIT et de ses commandes (push, pull, commit...)"
+            ],
+            technologies: ["JavaScript", "HTML5 Canvas", "CSS Animations"],
+            demoContent: `
+                <video controls autoplay loop muted class="w-fit-content h-full object-cover rounded-xl" loading="lazy">
+                    <source src="./assets/videos/unihandlervideo.webm" type="video/webm">
+                    Votre navigateur ne supporte pas les vidéos HTML5
+                </video>
+            `,
+            demoBg: "bg-blue-100",
+            links: [
+                {
+                    url: "https://github.com/youcefaddou/Uni-Handler",
+                    icon: "fab fa-github",
+                    text: "Code"
+                },
+            ]
+        },
         2: {
             title: "The Game of Life",
             description: "Implémentation interactive de l'automate cellulaire de Conway en JavaScript vanilla avec HTML5 Canvas.",
@@ -131,7 +207,7 @@ function initProjectsDetails() {
             ],
             technologies: ["JavaScript", "HTML5 Canvas", "CSS Animations"],
             demoContent: `
-                <video controls autoplay loop muted class="w-fit-content h-full object-cover rounded-xl">
+                <video controls autoplay loop muted class="w-fit-content h-full object-cover rounded-xl" loading="lazy">
                     <source src="./assets/videos/gameoflifevideo.webm" type="video/webm">
                     Votre navigateur ne supporte pas les vidéos HTML5
                 </video>
@@ -150,29 +226,6 @@ function initProjectsDetails() {
                 }
             ]
         },
-        1: {
-            title: "Formulaire de Contact",
-            description: "Application web complète pour la gestion des disponibilités et des coordonnées des utilisateurs, avec un back-end basé sur Express.js et une base de données MySQL.",
-            features: [
-                "Formulaire de contact avec validation des champs (nom, prénom, email, téléphone)",
-                "Sélection des disponibilités (jour, heure, minutes)",
-                "Envoi des données au serveur via une requête POST",
-                "Stockage des données dans une base de données MySQL",
-                "Interface utilisateur moderne avec React et TailwindCSS"
-            ],
-            technologies: ["React", "TailwindCSS", "Express.js", "MySQL", "Prisma"],
-            demoContent: `
-                <img src="./assets/images/Capture.PNG" alt="Aperçu du projet Majordhomm" class="w-fit-content h-full object-cover rounded-xl">
-            `,
-            demoBg: "bg-purple-100",
-            links: [
-                {
-                    url: "https://github.com/youcefaddou/Majordhomm-test_Youcef",
-                    icon: "fab fa-github",
-                    text: "Code"
-                },
-            ]
-        },
         3: {
             title: "The Maze Cat Runner - PHP",
             description: "Création d'un jeu de labyrinthe dynamique avec un système de vies en PHP avec HTML5 Canvas.",
@@ -184,7 +237,7 @@ function initProjectsDetails() {
             ],
             technologies: ["PHP", "HTML5 Canvas", "CSS Animations"],
             demoContent: `
-                <video controls autoplay loop muted class="w-fit-content h-full object-cover rounded-xl">
+                <video controls autoplay loop muted class="w-fit-content h-full object-cover rounded-xl" loading="lazy">
                     <source src="./assets/videos/maze.webm" type="video/webm">
                     Votre navigateur ne supporte pas les vidéos HTML5
                 </video>
@@ -209,7 +262,7 @@ function initProjectsDetails() {
             ],
             technologies: ["JavaScript", "HTML5 Canvas", "CSS Animations"],
             demoContent: `
-                <video controls autoplay loop muted class="w-fit-content h-full object-cover rounded-xl">
+                <video controls autoplay loop muted class="w-fit-content h-full object-cover rounded-xl" loading="lazy">
                     <source src="./assets/videos/penduvideo.webm" type="video/webm">
                     Votre navigateur ne supporte pas les vidéos HTML5
                 </video>
@@ -234,7 +287,7 @@ function initProjectsDetails() {
             ],
             technologies: ["JavaScript", "HTML5 Canvas", "CSS Animations"],
             demoContent: `
-                <video controls autoplay loop muted class="w-fit-content h-full object-cover rounded-xl">
+                <video controls autoplay loop muted class="w-fit-content h-full object-cover rounded-xl" loading="lazy">
                     <source src="./assets/videos/puissancevideo.webm" type="video/webm">
                     Votre navigateur ne supporte pas les vidéos HTML5
                 </video>
@@ -248,32 +301,6 @@ function initProjectsDetails() {
                 },
             ]
         },
-        6: {
-            title: "Uni Handler",
-            description: "Création d'une application de gestion d'école via API, en JavaScript avec HTML5 et CSS.",
-            features: [
-                "Gestion des promotions avec possibilité d'ajout, de modification et de suppression",
-                "Gestion des étudiants avec possibilité d'ajout, de modification et de suppression",
-                "Manipulation de données via une API custom spécialement conçue pour le projet",
-                "Projet collaboratif avec utilisation de GIT et de ses commandes (push, pull, commit...)"
-            ],
-            technologies: ["JavaScript", "HTML5 Canvas", "CSS Animations"],
-            demoContent: `
-                <video controls autoplay loop muted class="w-fit-content h-full object-cover rounded-xl">
-                    <source src="./assets/videos/unihandlervideo.webm" type="video/webm">
-                    Votre navigateur ne supporte pas les vidéos HTML5
-                </video>
-            `,
-            demoBg: "bg-blue-100",
-            links: [
-                {
-                    url: "https://github.com/youcefaddou/Uni-Handler",
-                    icon: "fab fa-github",
-                    text: "Code"
-                },
-            ]
-        },
-        //  ici les autres projets 
     };
 
     // selection des éléments DOM
@@ -318,6 +345,11 @@ function initProjectsDetails() {
 
             projectDemo.className = `h-64 flex items-center justify-center rounded-xl mb-4 ${project.demoBg}`;
             projectDemo.innerHTML = project.demoContent;
+
+            // Ajoute loading="lazy" sur les images/vidéos injectées dynamiquement
+            projectDemo.querySelectorAll('img,video').forEach(el => {
+                el.setAttribute('loading', 'lazy');
+            });
 
             detailsPanel.classList.remove('hidden');
             detailsPanel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
