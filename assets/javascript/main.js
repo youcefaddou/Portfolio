@@ -121,6 +121,41 @@ function initCoverflowCarousel() {
 
 function initProjectsDetails() {
     const projects = {
+        8: {
+            title: "Eco-Tec Cycle",
+            description: "Plateforme web éco-responsable pour sensibiliser, localiser et encourager le recyclage des équipements électroniques. Authentification sécurisée, carte interactive, animations modernes et suivi d'impact utilisateur.",
+            features: [
+                "Carte interactive des points de collecte et de réparation (Leaflet + filtres dynamiques)",
+                "Articles pédagogiques sur le recyclage, la loi AGEC, l’indice de réparabilité, etc.",
+                "Tableau de bord utilisateur : statistiques, historique, suggestions personnalisées",
+                "Authentification sécurisée (Google OAuth, email/mot de passe) avec NextAuth.js",
+                "Animations fluides au scroll et transitions de page (Framer Motion)",
+                "Interface responsive et moderne avec TailwindCSS",
+                "Gestion des utilisateurs et des données avec Prisma + PostgreSQL"
+            ],
+            technologies: [
+                "Next.js", "React", "TailwindCSS", "Framer Motion", "Prisma", "PostgreSQL", "NextAuth.js", "Leaflet"
+            ],
+            demoContent: `
+                <video controls autoplay loop muted class="w-fit-content h-full object-cover rounded-xl" loading="lazy">
+                    <source src="./assets/videos/ecotecvideo.mp4" type="video/mp4">
+                    Votre navigateur ne supporte pas les vidéos HTML5
+                </video>
+            `,
+            demoBg: "bg-green-100 bg-opacity-10",
+            links: [
+                {
+                    url: "https://github.com/youcefaddou/eco-tec_cycle",
+                    icon: "fab fa-github",
+                    text: "Code"
+                },
+                {
+                    url: "https://ecotec-cycle.vercel.app/",
+                    icon: "fas fa-external-link-alt",
+                    text: "Démo"
+                }
+            ]
+        },
 
         7: {
             title: "Landing Page NexaDigital",
