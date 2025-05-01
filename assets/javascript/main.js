@@ -126,7 +126,7 @@ function initProjectsDetails() {
             description: "Plateforme web éco-responsable pour sensibiliser, localiser et encourager le recyclage des équipements électroniques. Authentification sécurisée, carte interactive, animations modernes et suivi d'impact utilisateur.",
             features: [
                 "Carte interactive des points de collecte et de réparation (Leaflet + filtres dynamiques)",
-                "Articles pédagogiques sur le recyclage, la loi AGEC, l’indice de réparabilité, etc.",
+                "Articles pédagogiques sur le recyclage, la loi AGEC, l'indice de réparabilité, etc.",
                 "Tableau de bord utilisateur : statistiques, historique, suggestions personnalisées",
                 "Authentification sécurisée (Google OAuth, email/mot de passe) avec NextAuth.js",
                 "Animations fluides au scroll et transitions de page (Framer Motion)",
@@ -163,7 +163,7 @@ function initProjectsDetails() {
             features: [
                 "Formulaire de contact avec validation (nom, email, téléphone, message)",
                 "Enregistrement des messages dans la base de données MySQL via Express.js et Prisma",
-                "Animations d’apparition au scroll (React hooks + CSS)",
+                "Animations d'apparition au scroll (React hooks + CSS)",
                 "Section newsletter prête à connecter au backend",
                 "Interface responsive et moderne avec React et TailwindCSS"
             ],
@@ -471,12 +471,39 @@ function initTimeline() {
     window.addEventListener('scroll', animateTimelineItems);
     animateTimelineItems();
 }
-
+function animateAbout() {
+    const aboutTitle = document.querySelector('.about-title');
+    if (!aboutTitle) return;
+    const spans = aboutTitle.querySelectorAll('span');
+    if (typeof anime === 'function' && spans.length > 0) {
+        anime({
+            targets: spans,
+            translateY: [
+                { value: '-2.75rem', easing: 'easeOutExpo', duration: 600 },
+                { value: 0, easing: 'easeOutBounce', duration: 800, delay: 100 }
+            ],
+            rotate: {
+                value: '1turn',
+                easing: 'easeInOutCirc',
+                duration: 1000
+            },
+            delay: (el, i) => i * 80,
+            easing: 'easeInOutCirc',
+            loop: true,
+            loopDelay: 1000,
+            direction: 'alternate',
+            endDelay: 1000
+        });
+    } else {
+        console.error('Erreur: anime.js non chargé ou spans introuvables');
+    }
+}
 document.addEventListener('DOMContentLoaded', function () {
+    
     initCoverflowCarousel();
     initProjectsDetails();
     initTimeline();
-
+    animateAbout();
     const projectDemoVideo = document.querySelector('#project-demo video');
     if (projectDemoVideo) {
         projectDemoVideo.addEventListener('loadedmetadata', adjustVideoSize);
