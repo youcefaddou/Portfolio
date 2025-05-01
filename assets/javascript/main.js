@@ -498,12 +498,28 @@ function animateAbout() {
         console.error('Erreur: anime.js non chargé ou spans introuvables');
     }
 }
+
+function animateHeroSection() {
+    const heroElements = document.querySelectorAll('.hero-animate');
+    if (typeof anime === 'function' && heroElements.length > 0) {
+        anime({
+            targets: heroElements,
+            opacity: [0, 1],
+            translateY: [100, 0],
+            duration: 1600,
+            delay: anime.stagger(140),
+            easing: 'cubicBezier(.22,1,.36,1)'
+        });
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     
     initCoverflowCarousel();
     initProjectsDetails();
     initTimeline();
     animateAbout();
+    animateHeroSection();
     const projectDemoVideo = document.querySelector('#project-demo video');
     if (projectDemoVideo) {
         projectDemoVideo.addEventListener('loadedmetadata', adjustVideoSize);

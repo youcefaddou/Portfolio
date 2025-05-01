@@ -309,3 +309,8 @@ body[data-theme="dark"] a[href="#contact"] {
     .project-card.left, .project-card.right { display: none;}
     .project-card.far-left, .project-card.far-right { display: none;}
 }
+
+.hero-animate {
+    opacity: 0;
+    transform: translateY(40px);
+}
