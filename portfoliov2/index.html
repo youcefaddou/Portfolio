@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A.Y Dev Portfolio - Développeur Full-Stack JavaScript</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    
+    <link rel="stylesheet" href="/src/assets/css/style.css" />
+  </head>
+
+  <body class="bg-gray-50 text-gray-800" data-theme="light">
+    <nav class="bg-white shadow-md fixed w-full z-10">
+      <div
+        class="container mx-auto px-6 py-3 flex justify-between items-center"
+      >
+        <a href="#" class="text-2xl font-bold text-blue-600"
+          >&lt;/&gt; A.Y Dev</a
+        >
+        <div class="hidden md:flex items-center space-x-5">
+          <a
+            href="#home"
+            class="px-3 py-2 text-gray-700 hover:text-blue-600 transition"
+            >Accueil</a
+          >
+          <a
+            href="#about"
+            class="px-3 py-2 text-gray-700 hover:text-blue-600 transition"
+            >À propos</a
+          >
+          <a
+            href="#skills"
+            class="px-3 py-2 text-gray-700 hover:text-blue-600 transition"
+            >Compétences</a
+          >
+          <a
+            href="#projects"
+            class="px-3 py-2 text-gray-700 hover:text-blue-600 transition"
+            >Projets</a
+          >
+          <a
+            href="#experience"
+            class="px-3 py-2 text-gray-700 hover:text-blue-600 transition"
+            >Expérience</a
+          >
+          <a
+            href="#education"
+            class="px-3 py-2 text-gray-700 hover:text-blue-600 transition"
+            >Éducation</a
+          >
+          <a
+            href="#contact"
+            class="px-3 py-2 text-gray-700 hover:text-blue-600 transition"
+            >Contact</a
+          >
+          <a
+            href="/src/assets/files/Youcef_Addou_Dev_FullStack_Alternance.pdf"
+            download
+            class="ml-4 bg-blue-600 hover:bg-blue-900 text-white px-4 py-2 rounded-md flex items-center transition"
+          >
+            <i class="fas fa-download mr-2"></i> CV
+          </a>
+          <!-- Dark mode toggle -->
+          <button
+            id="theme-toggle"
+            class="ml-4 text-gray-700 hover:text-blue-600 transition"
+          >
+            <i id="theme-icon" class="fas fa-moon text-xl"></i>
+          </button>
+        </div>
+        <!-- Menu mobile -->
+        <button class="md:hidden focus:outline-none" id="menu-toggle">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+
+      <!-- Contenu du menu mobile -->
+      <div class="md:hidden hidden bg-white w-full px-6 py-3" id="mobile-menu">
+        <div class="flex flex-col space-y-3">
+          <a href="#home" class="py-2 text-gray-700 hover:text-blue-600"
+            >Accueil</a
+          >
+          <a href="#about" class="py-2 text-gray-700 hover:text-blue-600"
+            >À propos</a
+          >
+          <a href="#skills" class="py-2 text-gray-700 hover:text-blue-600"
+            >Compétences</a
+          >
+          <a href="#projects" class="py-2 text-gray-700 hover:text-blue-600"
+            >Projets</a
+          >
+          <a href="#experience" class="py-2 text-gray-700 hover:text-blue-600"
+            >Expérience</a
+          >
+          <a href="#education" class="py-2 text-gray-700 hover:text-blue-600"
+            >Éducation</a
+          >
+          <a href="#contact" class="py-2 text-gray-700 hover:text-blue-600"
+            >Contact</a
+          >
+          <a
+            href="/src/assets/files/Youcef_Addou_Dev_FullStack_Alternance.pdf"
+            download
+            class="mt-2 bg-blue-600 text-white px-4 py-2 rounded-md flex items-center justify-center"
+          >
+            <i class="fas fa-download mr-2"></i> Télécharger mon CV
+          </a>
+        </div>
+      </div>
+    </nav>
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="hero-gradient text-white pt-24 pb-16 md:pt-32 md:pb-24"
+    >
+      <div
+        class="container mx-auto px-6 flex flex-col md:flex-row items-center"
+      >
+        <div class="md:w-1/2 mb-10 md:mb-0">
+          <h1 class="text-4xl md:text-5xl font-bold mb-4 hero-animate">
+            Youcef Addou
+          </h1>
+          <h2 class="text-2xl md:text-3xl font-semibold mb-6 hero-animate">
+            Développeur Full-Stack JavaScript
+          </h2>
+          <p class="text-lg mb-8 hero-animate">
+            Passionné par la création de solutions web innovantes et
+            performantes. Actuellement en formation pour perfectionner mes
+            compétences en développement web.
+          </p>
+          <div class="flex space-x-4 hero-animate">
+            <a
+              href="#contact"
+              class="bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition duration-300"
+              >Me contacter</a
+            >
+            <a
+              href="#projects"
+              class="border-2 border-white text-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-blue-600 transition duration-300"
+              >Voir mes projets</a
+            >
+          </div>
+        </div>
+        <div class="md:w-1/2 flex justify-center hero-animate">
+          <div
+            class="relative w-64 h-64 md:w-80 md:h-80 bg-white rounded-full overflow-hidden shadow-xl"
+          >
+            <!-- Placeholder for profile image -->
+            <div
+              class="absolute inset-0 bg-blue-100 flex items-center justify-center"
+            >
+              <img
+                src="/src/assets/images/picture.jpeg"
+                alt="picture"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <canvas id="sideCanvasLeft"></canvas>
+    <canvas id="sideCanvasRight"></canvas>
+    
+    <div class="sections-container">
+      <!-- About Section -->
+      <section id="about mx-auto" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+          <h2 class="text-3xl font-bold text-center mb-12">
+            <div class="about-title">
+              <span>Y</span><span>O</span><span>U</span><span>C</span
+              ><span>E</span><span>F</span> <span>&nbsp;</span><span>I</span
+              ><span>S</span><span>&nbsp;</span><span>A</span
+              ><span>&nbsp;</span> <span>D</span><span>E</span><span>V</span>
+            </div>
+          </h2>
+          <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+              <p class="text-lg mb-4">
+                Je m'appelle Youcef, j'ai 34 ans et je suis passionné par le
+                développement web. Après une première expérience professionnelle
+                dans le domaine commercial et entrepreneurial, j'ai décidé de me
+                reconvertir dans le développement web, un domaine qui m'a
+                toujours attiré.
+              </p>
+              <p class="text-lg mb-4">
+                Actuellement en formation, j'ai déjà acquis des compétences
+                solides en HTML, CSS, JavaScript et PHP. Je continue à me former
+                pour devenir un développeur full-stack complet, avec une
+                spécialisation en JavaScript et Node.js.
+              </p>
+              <p class="text-lg">
+                Mon objectif est de trouver un stage, une alternance ou un CDI
+                qui me permettra de mettre en pratique mes compétences tout en
+                continuant à apprendre auprès de professionnels expérimentés.
+              </p>
+            </div>
+            <div class="md:w-1/2 bg-gray-50 p-8 rounded-xl shadow-md">
+              <h3 class="text-xl font-semibold mb-4">
+                Informations personnelles
+              </h3>
+              <div class="space-y-4">
+                <div class="flex items-center">
+                  <i class="fas fa-user text-blue-500 mr-4 w-6 text-center"></i>
+                  <span>Youcef Addou, 34 ans</span>
+                </div>
+                <div class="flex items-center">
+                  <i
+                    class="fas fa-envelope text-blue-500 mr-4 w-6 text-center"
+                  ></i>
+                  <span>youcefaddou@gmail.com</span>
+                </div>
+                <div class="flex items-center">
+                  <i
+                    class="fas fa-map-marker-alt text-blue-500 mr-4 w-6 text-center"
+                  ></i>
+                  <span>Marseille, France</span>
+                </div>
+                <div class="flex items-center">
+                  <i
+                    class="fab fa-github text-blue-500 mr-4 w-6 text-center"
+                  ></i>
+                  <a
+                    href="https://github.com/youcefaddou"
+                    class="hover:text-blue-600"
+                    >github.com/youcefaddou</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Skills Section -->
+      <section id="skills mx-auto" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-16">
+          <h2 class="text-3xl font-bold text-center mb-12">Mes compétences</h2>
+          <div class="mb-12">
+            <h3
+              class="text-xl font-semibold mb-6 text-blue-600 flex items-center"
+            >
+              <i class="fas fa-laptop-code mr-3"></i> Frontend
+            </h3>
+            <div class="flex flex-wrap gap-4">
+              <div
+                class="skill-badge bg-white px-6 py-3 rounded-full shadow-md flex items-center"
+              >
+                <i class="fab fa-js text-yellow-400 mr-2"></i>
+                <span>JavaScript</span>
+              </div>
+              <div
+                class="skill-badge bg-white px-6 py-3 rounded-full shadow-md flex items-center"
+              >
+                <i class="fab fa-react text-blue-400 mr-2"></i>
+                <span>React (en apprentissage)</span>
+              </div>
+              <div
+                class="skill-badge bg-white px-6 py-3 rounded-full shadow-md flex items-center"
+              >
+                <i class="fab fa-html5 text-orange-500 mr-2"></i>
+                <span>HTML5</span>
+              </div>
+              <div
+                class="skill-badge bg-white px-6 py-3 rounded-full shadow-md flex items-center"
+              >
+                <i class="fab fa-css3-alt text-blue-500 mr-2"></i>
+                <span>CSS3</span>
+              </div>
+              <div
+                class="skill-badge bg-white px-6 py-3 rounded-full shadow-md flex items-center"
+              >
+                <i class="fas fa-wind text-blue-400 mr-2"></i>
+                <span>Tailwind CSS</span>
+              </div>
+              <div
+                class="skill-badge bg-white px-6 py-3 rounded-full shadow-md flex items-center"
+              >
+                <i class="fab fa-bootstrap text-purple-500 mr-2"></i>
+                <span>Bootstrap</span>
+              </div>
+            </div>
+          </div>
+          <div class="mb-12">
+            <h3
+              class="text-xl font-semibold mb-6 text-blue-600 flex items-center"
+            >
+              <i class="fas fa-server mr-3"></i> Backend
+            </h3>
+            <div class="flex flex-wrap gap-4">
+              <div
+                class="skill-badge bg-white px-6 py-3 rounded-full shadow-md flex items-center"
+              >
+                <i class="fab fa-node-js text-green-500 mr-2"></i>
+                <span>Node.js</span>
+              </div>
+              <div
+                class="skill-badge bg-white px-6 py-3 rounded-full shadow-md flex items-center"
+              >
+                <i class="fas fa-project-diagram text-gray-700 mr-2"></i>
+                <span>Express</span>
+              </div>
+              <div
+                class="skill-badge bg-white px-6 py-3 rounded-full shadow-md flex items-center"
+              >
+                <i class="fab fa-php text-purple-500 mr-2"></i>
+                <span>PHP</span>
+              </div>
+              <div
+                class="skill-badge bg-white px-6 py-3 rounded-full shadow-md flex items-center"
+              >
+                <i class="fab fa-python text-blue-600 mr-2"></i>
+                <span>Python</span>
+              </div>
+            </div>
+          </div>
+          <div class="mb-12">
+            <h3
+              class="text-xl font-semibold mb-6 text-blue-600 flex items-center"
+            >
+              <i class="fas fa-database mr-3"></i> Bases de données
+            </h3>
+            <div class="flex flex-wrap gap-4">
+              <div
+                class="skill-badge bg-white px-6 py-3 rounded-full shadow-md flex items-center"
+              >
+                <i class="fas fa-database text-blue-700 mr-2"></i>
+                <span>MySQL</span>
+              </div>
+              <div
+                class="skill-badge bg-white px-6 py-3 rounded-full shadow-md flex items-center"
+              >
+                <i class="fas fa-leaf text-green-600 mr-2"></i>
+                <span>MongoDB</span>
+              </div>
+              <div
+                class="skill-badge bg-white px-6 py-3 rounded-full shadow-md flex items-center"
+              >
+                <i class="fas fa-table text-blue-500 mr-2"></i>
+                <span>SQL</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3
+              class="text-xl font-semibold mb-6 text-blue-600 flex items-center"
+            >
+              <i class="fas fa-tools mr-3"></i> Outils & Méthodologies
+            </h3>
+            <div class="flex flex-wrap gap-4">
+              <div
+                class="skill-badge bg-white px-6 py-3 rounded-full shadow-md flex items-center"
+              >
+                <i class="fab fa-git-alt text-orange-600 mr-2"></i>
+                <span>Git</span>
+              </div>
+              <div
+                class="skill-badge bg-white px-6 py-3 rounded-full shadow-md flex items-center"
+              >
+                <i class="fab fa-docker text-blue-400 mr-2"></i>
+                <span>Docker</span>
+              </div>
+              <div
+                class="skill-badge bg-white px-6 py-3 rounded-full shadow-md flex items-center"
+              >
+                <i class="fas fa-paint-brush text-pink-500 mr-2"></i>
+                <span>Figma</span>
+              </div>
+              <div
+                class="skill-badge bg-white px-6 py-3 rounded-full shadow-md flex items-center"
+              >
+                <i class="fas fa-vial text-purple-500 mr-2"></i>
+                <span>Jest</span>
+              </div>
+              <div
+                class="skill-badge bg-white px-6 py-3 rounded-full shadow-md flex items-center"
+              >
+                <i class="fas fa-project-diagram text-green-600 mr-2"></i>
+                <span>MVC</span>
+              </div>
+              <div
+                class="skill-badge bg-white px-6 py-3 rounded-full shadow-md flex items-center"
+              >
+                <i class="fas fa-tasks text-blue-600 mr-2"></i>
+                <span>SCRUM</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Projects Section -->
+      <section id="projects mx-auto" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+          <h2 class="text-3xl font-bold text-center mb-12">Mes projets</h2>
+          <div class="projects-carousel-container relative overflow-hidden">
+            <!-- Carousel Navigation -->
+            <button
+              id="carousel-prev"
+              class="carousel-btn absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white p-3 rounded-full shadow-md hover:bg-gray-100 transition ml-4 disabled:opacity-50 disabled:cursor-not-allowed"
+              aria-label="Previous project"
+            >
+              <i class="fas fa-chevron-left text-blue-600 text-lg"></i>
+            </button>
+            <button
+              id="carousel-next"
+              class="carousel-btn absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-white p-3 rounded-full shadow-md hover:bg-gray-100 transition mr-4 disabled:opacity-50 disabled:cursor-not-allowed"
+              aria-label="Next project"
+            >
+              <i class="fas fa-chevron-right text-blue-600 text-lg"></i>
+            </button>
+            <div
+              class="projects-carousel flex justify-center items-center"
+              id="projects-carousel"
+            >
+              <!-- Project 8 -->
+              <div
+                class="project-card flex-shrink-0 w-[300px] rounded-b-xl mx-4 cursor-pointer"
+                data-project="8"
+              >
+                <div
+                  class="h-48 bg-blue-100 flex items-center justify-center rounded-t-xl overflow-hidden"
+                >
+                  <img
+                    src="/src/assets/images/ecotecpicture.png"
+                    alt="Capture d'écran de Eco-Tec Cycle"
+                    loading="lazy"
+                    class="h-full w-full object-cover"
+                  />
+                </div>
+                <div class="bg-gray-50 p-6 rounded-b-xl">
+                  <h3 class="text-xl font-semibold mb-2">Eco-Tec Cycle</h3>
+                </div>
+              </div>
+              <!-- Project 7 -->
+              <div
+                class="project-card flex-shrink-0 w-[300px] rounded-b-xl mx-4 cursor-pointer"
+                data-project="7"
+              >
+                <div
+                  class="h-48 bg-blue-100 flex items-center justify-center rounded-t-xl overflow-hidden"
+                >
+                  <img
+                    src="/src/assets/images/nexadigital.png"
+                    alt="Capture d'écran de NexaDigital"
+                    loading="lazy"
+                    class="h-full w-full object-cover"
+                  />
+                </div>
+                <div class="bg-gray-50 p-6 rounded-b-xl">
+                  <h3 class="text-xl font-semibold mb-2">
+                    Landing Page NexaDigital
+                  </h3>
+                </div>
+              </div>
+
+              <!-- Project 1.5 -->
+              <div
+                class="project-card flex-shrink-0 w-[300px] rounded-b-xl mx-4 cursor-pointer"
+                data-project="1"
+              >
+                <div
+                  class="h-48 bg-blue-100 flex items-center justify-center rounded-t-xl overflow-hidden"
+                >
+                  <img
+                    src="/src/assets/images/Capture.PNG"
+                    alt="Capture d'écran du formulaire de contact"
+                    loading="lazy"
+                    class="h-full w-full object-cover"
+                  />
+                </div>
+                <div class="bg-gray-50 p-6 rounded-b-xl">
+                  <h3 class="text-xl font-semibold mb-2">
+                    Formulaire de Contact
+                  </h3>
+                </div>
+              </div>
+              <!-- Project 5 -->
+              <div
+                class="project-card flex-shrink-0 w-[300px] rounded-b-xl mx-4 cursor-pointer"
+                data-project="6"
+              >
+                <div
+                  class="h-48 bg-red-100 flex items-center justify-center rounded-t-xl overflow-hidden"
+                >
+                  <img
+                    src="/src/assets/images/Unihandler.png"
+                    alt="Capture d'écran Uni Handler"
+                    loading="lazy"
+                    class="h-full w-full object-cover"
+                  />
+                </div>
+                <div class="bg-gray-50 p-6 rounded-b-xl">
+                  <h3 class="text-xl font-semibold mb-2">Uni-Handler</h3>
+                </div>
+              </div>
+              <!-- Project 1 -->
+              <div
+                class="project-card flex-shrink-0 w-[300px] rounded-b-xl mx-4 cursor-pointer"
+                data-project="2"
+              >
+                <div
+                  class="h-48 bg-blue-100 flex items-center justify-center rounded-t-xl overflow-hidden"
+                >
+                  <img
+                    src="/src/assets/images/game-of-life-screenshot.png"
+                    alt="Capture d'écran du Game of Life"
+                    loading="lazy"
+                    class="h-full w-full object-cover"
+                  />
+                </div>
+                <div class="bg-gray-50 p-6 rounded-b-xl">
+                  <h3 class="text-xl font-semibold mb-2">The Game of Life</h3>
+                </div>
+              </div>
+              <!-- Project 2 -->
+              <div
+                class="project-card flex-shrink-0 w-[300px] rounded-b-xl mx-4 cursor-pointer"
+                data-project="3"
+              >
+                <div
+                  class="h-48 bg-green-100 flex items-center justify-center rounded-t-xl overflow-hidden"
+                >
+                  <img
+                    src="/src/assets/images/mazecatimg.png"
+                    alt="Capture d'écran du Maze Cat Runner"
+                    loading="lazy"
+                    class="h-full w-full object-cover"
+                  />
+                </div>
+                <div class="bg-gray-50 p-6 rounded-b-xl">
+                  <h3 class="text-xl font-semibold mb-2">
+                    Maze Cat Runner - PHP
+                  </h3>
+                </div>
+              </div>
+              <!-- Project 3 -->
+              <div
+                class="project-card flex-shrink-0 w-[300px] rounded-b-xl mx-4 cursor-pointer"
+                data-project="4"
+              >
+                <div
+                  class="h-48 bg-purple-100 flex items-center justify-center rounded-t-xl overflow-hidden"
+                >
+                  <img
+                    src="/src/assets/images/hangman.png"
+                    alt="Capture d'écran du Hangman"
+                    loading="lazy"
+                    class="h-full w-full object-cover"
+                  />
+                </div>
+                <div class="bg-gray-50 p-6 rounded-b-xl">
+                  <h3 class="text-xl font-semibold mb-2">The Hangman Game</h3>
+                </div>
+              </div>
+              <!-- Project 4 -->
+              <div
+                class="project-card flex-shrink-0 w-[300px] rounded-b-xl mx-4 cursor-pointer"
+                data-project="5"
+              >
+                <div
+                  class="h-48 bg-yellow-100 flex items-center justify-center rounded-t-xl overflow-hidden"
+                >
+                  <img
+                    src="/src/assets/images/puissance4.png"
+                    alt="Capture d'écran du Puissance 4"
+                    loading="lazy"
+                    class="h-full w-full object-cover"
+                  />
+                </div>
+                <div class="bg-gray-50 p-6 rounded-b-xl">
+                  <h3 class="text-xl font-semibold mb-2">
+                    Connect 4 (Puissance 4)
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Project Details Panel -->
+          <div
+            class="project-details hidden mt-8 bg-gray-50 p-8 rounded-xl shadow-md"
+          >
+            <div class="flex flex-col md:flex-row gap-8">
+              <!-- Video Part (left) -->
+              <div class="md:w-1/2">
+                <div
+                  id="project-demo"
+                  class="relative h-64 rounded-xl mb-4 overflow-hidden bg-blue-100"
+                >
+                  <video
+                    controls
+                    autoplay
+                    loop
+                    muted
+                    class="w-fit-content h-full object-contain"
+                    loading="lazy"
+                  >
+                    <source
+                      src="/src/assets/videos/gameoflifevideo.webm"
+                      type="video/webm"
+                    />
+                    Votre navigateur ne supporte pas les vidéos HTML5
+                  </video>
+                </div>
+              </div>
+              <!-- Text Part (right) -->
+              <div class="md:w-1/2">
+                <h3 id="project-title" class="text-2xl font-bold mb-4">
+                  The Game of Life
+                </h3>
+                <p id="project-description" class="text-gray-600 mb-4">
+                  Implémentation interactive de l'automate cellulaire de Conway
+                  en JavaScript vanilla avec HTML5 Canvas. Ce jeu simule
+                  l'évolution de cellules selon des règles simples mais qui
+                  produisent des comportements complexes.
+                </p>
+                <div id="project-features" class="mb-4">
+                  <div class="flex items-start mb-2">
+                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                    <span
+                      >Simulation des règles originales du jeu de la vie
+                      (naissance, survie, mort)</span
+                    >
+                  </div>
+                  <div class="flex items-start mb-2">
+                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                    <span
+                      >Possibilité de dessiner des motifs directement sur la
+                      grille</span
+                    >
+                  </div>
+                  <div class="flex items-start mb-2">
+                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                    <span>Boutons de contrôle play/reset</span>
+                  </div>
+                </div>
+                <div
+                  id="project-technologies"
+                  class="flex flex-wrap gap-2 mb-4"
+                >
+                  <span
+                    class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full"
+                    >JavaScript</span
+                  >
+                  <span
+                    class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full"
+                    >HTML5 Canvas</span
+                  >
+                  <span
+                    class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full"
+                    >CSS Animations</span
+                  >
+                  <span
+                    class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full"
+                    >Algorithmes</span
+                  >
+                </div>
+                <div id="project-links" class="flex flex-wrap gap-4">
+                  <a
+                    href="https://github.com/youcefaddou/The-Game-of-Life"
+                    class="text-blue-600 hover:text-blue-800"
+                    target="_blank"
+                  >
+                    <i class="fab fa-github mr-1"></i> Code source
+                  </a>
+                  <a
+                    href="https://codepen.io/youcefaddou/pen/KKQjXQY"
+                    class="text-blue-600 hover:text-blue-800"
+                    target="_blank"
+                  >
+                    <i class="fas fa-external-link-alt mr-1"></i> Live Demo
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Experience & Education Section -->
+      <section id="experience mx-auto" class="py-16 bg-gray-50 relative">
+        <div class="container mx-auto px-6">
+          <h2 class="text-3xl font-bold text-center mb-12">
+            Parcours professionnel
+          </h2>
+          <div class="max-w-3xl mx-auto">
+            <!-- Experience 1 -->
+            <div class="relative pl-8 mb-8 timeline-item">
+              <div class="bg-white p-6 rounded-xl shadow-md">
+                <div class="flex justify-between items-start mb-2">
+                  <h3 class="text-xl font-semibold">
+                    Développeur Web Stagiaire
+                  </h3>
+                  <span
+                    class="bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full"
+                    >2025 - Présent</span
+                  >
+                </div>
+                <p class="text-gray-600 mb-2">École Ri7, Aubagne</p>
+                <ul class="list-disc pl-5 text-gray-700 space-y-1">
+                  <li>
+                    Développement de solutions sur mesure en JavaScript/PHP
+                  </li>
+                  <li>Intégration de bases de données (MySQL/MongoDB)</li>
+                  <li>
+                    Participation à des projets collaboratifs en méthodologie
+                    SCRUM
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- Experience 2 -->
+            <div class="relative pl-8 mb-8 timeline-item">
+              <div class="bg-white p-6 rounded-xl shadow-md">
+                <div class="flex justify-between items-start mb-2">
+                  <h3 class="text-xl font-semibold">Assistant Commercial</h3>
+                  <span
+                    class="bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full"
+                    >2021 - 2022</span
+                  >
+                </div>
+                <p class="text-gray-600 mb-2">La Table de Cana, Marseille</p>
+                <ul class="list-disc pl-5 text-gray-700 space-y-1">
+                  <li>
+                    Analyse des besoins clients et proposition de solutions
+                  </li>
+                  <li>
+                    Résolution de problèmes et gestion des relations clients
+                  </li>
+                  <li>
+                    Compétences transférables en communication et organisation
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- Experience 3 -->
+            <div class="relative pl-8 mb-8 timeline-item">
+              <div class="bg-white p-6 rounded-xl shadow-md">
+                <div class="flex justify-between items-start mb-2">
+                  <h3 class="text-xl font-semibold">Franchisé, Entrepreneur</h3>
+                  <span
+                    class="bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full"
+                    >2018 - 2019</span
+                  >
+                </div>
+                <p class="text-gray-600 mb-2">
+                  ADA Location de véhicules, Draguignan
+                </p>
+                <ul class="list-disc pl-5 text-gray-700 space-y-1">
+                  <li>
+                    Stimulation de la croissance de l'entreprise de 20% grâce à
+                    une expansion stratégique du marché
+                  </li>
+                  <li>
+                    Introduction de modèles de tarification dynamique et de
+                    forfaits sur mesure
+                  </li>
+                  <li>
+                    Entretien de partenariats stratégiques avec des parties
+                    prenantes clés
+                  </li>
+                  <li>
+                    Initialisation de stratégies d'acquisition de clients basées
+                    sur les données
+                  </li>
+                  <li>
+                    Surveillance continue des tendances du marché et des
+                    activités concurrentielles
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- Experience 4 -->
+            <div class="relative pl-8 mb-8 timeline-item">
+              <div class="bg-white p-6 rounded-xl shadow-md">
+                <div class="flex justify-between items-start mb-2">
+                  <h3 class="text-xl font-semibold">Manager d'équipe</h3>
+                  <span
+                    class="bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full"
+                    >2015 - 2018</span
+                  >
+                </div>
+                <p class="text-gray-600 mb-2">
+                  Karting Indoor Provence, Marseille
+                </p>
+                <ul class="list-disc pl-5 text-gray-700 space-y-1">
+                  <li>
+                    Amélioration des performances de l'équipe et de l'efficacité
+                    opérationnelle
+                  </li>
+                  <li>
+                    Fixation d'objectifs clairs et de benchmarks de performance
+                  </li>
+                  <li>
+                    Encouragement d'une culture de travail collaborative et
+                    d'unité
+                  </li>
+                  <li>
+                    Gestion de la planification, de la dotation en personnel et
+                    de la logistique
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Experience & Education Section -->
+      <section id="education mx-auto" class="py-16 bg-white relative">
+        <div class="container mx-auto px-6">
+          <h2 class="text-3xl font-bold text-center mb-12">
+            Éducation et Formations
+          </h2>
+          <div class="max-w-3xl mx-auto">
+            <!-- Education 1 -->
+            <div class="relative pl-8 mb-8 timeline-item">
+              <div class="bg-gray-50 p-6 rounded-xl shadow-md">
+                <div class="flex justify-between items-start mb-2">
+                  <h3 class="text-xl font-semibold">
+                    Développeur d'Applications Web/Web Mobile
+                  </h3>
+                  <span
+                    class="bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full"
+                    >2025</span
+                  >
+                </div>
+                <p class="text-gray-600 mb-2">École Ri7, Aubagne</p>
+                <ul class="list-disc pl-5 text-gray-700 space-y-1">
+                  <li>Application React (en cours)</li>
+                  <li>Optimisation d'API</li>
+                  <li>UX/UI design et interface</li>
+                  <li>Gestion back-end</li>
+                </ul>
+              </div>
+            </div>
+            <!-- Education 2 -->
+            <div class="relative pl-8 mb-8 timeline-item">
+              <div class="bg-gray-50 p-6 rounded-xl shadow-md">
+                <div class="flex justify-between items-start mb-2">
+                  <h3 class="text-xl font-semibold">
+                    Certification Scientific Computing in Python
+                  </h3>
+                  <span
+                    class="bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full"
+                    >2024</span
+                  >
+                </div>
+                <p class="text-gray-600 mb-2">FreeCodeCamp</p>
+              </div>
+            </div>
+            <!-- Education 3 -->
+            <div class="relative pl-8 mb-8 timeline-item">
+              <div class="bg-gray-50 p-6 rounded-xl shadow-md">
+                <div class="flex justify-between items-start mb-2">
+                  <h3 class="text-xl font-semibold">
+                    Licence en Economie et Management
+                  </h3>
+                  <span
+                    class="bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full"
+                    >2010 - 2013</span
+                  >
+                </div>
+                <p class="text-gray-600 mb-2">Université d'Aix-Marseille</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact mx-auto" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+          <h2 class="text-3xl font-bold text-center mb-12">Contactez-moi</h2>
+
+          <div class="max-w-4xl mx-auto flex flex-col md:flex-row">
+            <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+              <h3 class="text-xl font-semibold mb-4">
+                Disponible pour des opportunités
+              </h3>
+              <p class="mb-6">
+                Je suis actuellement à la recherche d'une alternance ou d'un CDI
+                en tant que développeur full-stack JavaScript. Si mon profil
+                vous intéresse, n'hésitez pas à me contacter !
+              </p>
+
+              <div class="space-y-4">
+                <div class="flex items-center">
+                  <div class="bg-blue-100 p-3 rounded-full mr-4">
+                    <i class="fas fa-envelope text-blue-600"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-medium">Email</h4>
+                    <a
+                      href="mailto:youcefaddou@gmail.com"
+                      class="text-blue-600 hover:underline"
+                      >youcefaddou@gmail.com</a
+                    >
+                  </div>
+                </div>
+                <div class="flex items-center">
+                  <div class="bg-blue-100 p-3 rounded-full mr-4">
+                    <i class="fab fa-github text-blue-600"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-medium">GitHub</h4>
+                    <a
+                      href="https://github.com/youcefaddou"
+                      class="text-blue-600 hover:underline"
+                      >github.com/youcefaddou</a
+                    >
+                  </div>
+                </div>
+                <div class="mt-6">
+                  <a
+                    href="/src/assets/files/Youcef_Addou_Dev_FullStack_Alternance.pdf"
+                    download="CV_Youcef_Addou_Developpeur_FullStack.pdf"
+                    class="bg-blue-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300 inline-flex items-center"
+                  >
+                    <i class="fas fa-download mr-2"></i> Télécharger mon CV
+                  </a>
+                  <p class="text-sm text-gray-500 mt-2">PDF - 103 Ko</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="md:w-1/2">
+              <form
+                class="bg-gray-50 p-6 rounded-xl shadow-md"
+                action="https://formsubmit.co/youcefaddou@gmail.com"
+                method="POST"
+              >
+                <input type="hidden" name="_honey" value="" />
+                <!-- Piège à bots -->
+                <input type="hidden" name="_template" value="box" />
+                <!-- Format email -->
+
+                <input
+                  type="hidden"
+                  name="_next"
+                  value="https://youcef-addou.netlify.app/pages/merci.html"
+                />
+                <!-- Désactive le CAPTCHA -->
+                <input type="hidden" name="_captcha" value="false" />
+                <!-- Anti-spam invisible -->
+                <input type="text" name="_honey" style="display: none" />
+                <div class="mb-4">
+                  <label for="name" class="block text-gray-700 mb-2">Nom</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="nom"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+
+                <div class="mb-4">
+                  <label for="email" class="block text-gray-700 mb-2"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+
+                <div class="mb-4">
+                  <label for="subject" class="block text-gray-700 mb-2"
+                    >Sujet</label
+                  >
+                  <input
+                    type="text"
+                    id="subject"
+                    name="sujet"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+
+                <div class="mb-4">
+                  <label for="message" class="block text-gray-700 mb-2"
+                    >Message</label
+                  >
+                  <textarea
+                    id="message"
+                    rows="4"
+                    name="message"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  class="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition duration-300 w-full"
+                >
+                  Envoyer le message
+                </button>
+                <div style="position: absolute; left: -5000px">
+                  <input type="text" name="_gotcha" tabindex="-1" />
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="mb-4 md:mb-0">
+            <h3 class="text-2xl font-bold">&lt;/&gt; A.Y Dev</h3>
+            <p class="text-gray-400">Développeur Full-Stack JavaScript</p>
+          </div>
+
+          <div class="flex space-x-6 mb-4 md:mb-0">
+            <a
+              href="https://github.com/youcefaddou"
+              class="text-gray-400 hover:text-white transition duration-300"
+            >
+              <i class="fab fa-github text-xl"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/youcef-addou/"
+              class="text-gray-400 hover:text-white transition duration-300"
+            >
+              <i class="fab fa-linkedin text-xl"></i>
+            </a>
+            <a
+              href="https://x.com/JohnHash3"
+              class="text-gray-400 transition duration-300 flex items-center"
+            >
+              <img
+                src="/src/assets/images/x-logo.svg"
+                alt="X logo"
+                class="h-6 w-6 fill-current hover:text-white-900"
+                loading="lazy"
+              />
+            </a>
+          </div>
+
+          <div class="text-gray-400 text-sm">
+            <p>
+              &copy; 2025 &lt;/&gt; A.Y Dev Portfolio. Tous droits réservés.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script type="module" src="/src/assets/javascript/animationThree.js"></script>
+    <script type="module" src="/src/assets/javascript/main.js"></script>
+  </body>
+</html>

@@ -1,5 +1,3 @@
-"use strict";
-
 document.getElementById('menu-toggle').addEventListener('click', function () {
     const mobileMenu = document.getElementById('mobile-menu');
     mobileMenu.classList.toggle('hidden');
@@ -433,8 +431,9 @@ function adjustVideoSize() {
 // Timeline Animation
 function initTimeline() {
     const timelineItems = document.querySelectorAll('.timeline-item');
-    const experienceSection = document.getElementById('experience');
-    const educationSection = document.getElementById('education');
+    // Recherche plus robuste des sections
+    const experienceSection = document.querySelector('#experience, [id*="experience"]');
+    const educationSection = document.querySelector('#education, [id*="education"]');
 
     if (!timelineItems.length) return;
 
@@ -469,6 +468,7 @@ function initTimeline() {
     }
 
     window.addEventListener('scroll', animateTimelineItems);
+    window.addEventListener('resize', animateTimelineItems);
     animateTimelineItems();
 }
 function animateAbout() {
@@ -526,3 +526,4 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     window.addEventListener('resize', adjustVideoSize);
 });
+
