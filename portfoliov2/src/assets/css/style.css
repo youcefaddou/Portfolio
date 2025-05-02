@@ -69,15 +69,15 @@ body {
 }
 .about-title {
   display: inline-block;
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   font-weight: bold;
   color: #2563eb;
 }
 
-.about-title span {
+.about-title span { 
   display: inline-block;
-  will-change: transform;
-}
+  will-change: transform; 
+} 
 
 .timeline-item::before {
   content: "";
@@ -414,6 +414,12 @@ body[data-theme="dark"] .project-details:hover {
 @media (max-width: 900px) {
   #sideCanvasLeft,
   #sideCanvasRight {
+    display: block;
+  }
+}
+@media (max-width: 600px) {
+  #sideCanvasLeft,
+  #sideCanvasRight {
     display: none;
   }
 }
@@ -422,4 +428,82 @@ body[data-theme="dark"] .project-details:hover {
   margin: 0 auto;
   position: relative;
   z-index: 3;
+}
+
+/* --- Responsive header dark mode toggle --- */
+@media (max-width: 1300px) {
+  #theme-toggle-mobile {
+    display: inline-block;
+    position: relative;
+    left: 0;
+    margin-right: 0.5rem;
+    z-index: 20;
+  }
+  #theme-toggle {
+    display: none !important;
+  }
+}
+@media (min-width: 1301px) {
+  #theme-toggle-mobile {
+    display: none !important;
+  }
+}
+/* Dark mode toggle dans menu mobile */
+#theme-toggle-mobile-menu {
+  display: inline-block;
+}
+
+/* --- CV button always visible and well placed --- */
+@media (max-width: 1301px)  {
+  .xl\:flex .bg-blue-600 {
+    margin-left: 0.5rem !important;
+    padding: 0.5rem 1.25rem !important;
+    font-size: 1rem;
+    min-width: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* --- Hero title responsive --- */
+.hero-title {
+  word-break: break-word;
+  overflow-wrap: break-word;
+  max-width: 100vw;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+@media (max-width: 1301px) {
+  .hero-title {
+    font-size: 2.2rem !important;
+    max-width: 95vw;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 1.5rem !important;
+    max-width: 98vw;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.1rem !important;
+    max-width: 99vw;
+    padding-right: 0.2rem;
+    padding-left: 0.2rem;
+  }
+}
+
+.about-dev-break {
+  display: inline-block;
+}
+@media (max-width: 550px) {
+  .about-dev-break {
+    display: block;
+  }
 }

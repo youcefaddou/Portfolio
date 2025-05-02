@@ -5,107 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>A.Y Dev Portfolio - Développeur Full-Stack JavaScript</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
     <link rel="stylesheet" href="/src/assets/css/style.css" />
   </head>
 
   <body class="bg-gray-50 text-gray-800" data-theme="light">
-    <nav class="bg-white shadow-md fixed w-full z-10">
-      <div
-        class="container mx-auto px-6 py-3 flex justify-between items-center"
-      >
-        <a href="#" class="text-2xl font-bold text-blue-600"
-          >&lt;/&gt; A.Y Dev</a
-        >
-        <div class="hidden md:flex items-center space-x-5">
-          <a
-            href="#home"
-            class="px-3 py-2 text-gray-700 hover:text-blue-600 transition"
-            >Accueil</a
-          >
-          <a
-            href="#about"
-            class="px-3 py-2 text-gray-700 hover:text-blue-600 transition"
-            >À propos</a
-          >
-          <a
-            href="#skills"
-            class="px-3 py-2 text-gray-700 hover:text-blue-600 transition"
-            >Compétences</a
-          >
-          <a
-            href="#projects"
-            class="px-3 py-2 text-gray-700 hover:text-blue-600 transition"
-            >Projets</a
-          >
-          <a
-            href="#experience"
-            class="px-3 py-2 text-gray-700 hover:text-blue-600 transition"
-            >Expérience</a
-          >
-          <a
-            href="#education"
-            class="px-3 py-2 text-gray-700 hover:text-blue-600 transition"
-            >Éducation</a
-          >
-          <a
-            href="#contact"
-            class="px-3 py-2 text-gray-700 hover:text-blue-600 transition"
-            >Contact</a
-          >
-          <a
-            href="/src/assets/files/Youcef_Addou_Dev_FullStack_Alternance.pdf"
-            download
-            class="ml-4 bg-blue-600 hover:bg-blue-900 text-white px-4 py-2 rounded-md flex items-center transition"
-          >
-            <i class="fas fa-download mr-2"></i> CV
-          </a>
-          <!-- Dark mode toggle -->
-          <button
-            id="theme-toggle"
-            class="ml-4 text-gray-700 hover:text-blue-600 transition"
-          >
-            <i id="theme-icon" class="fas fa-moon text-xl"></i>
-          </button>
+    <nav class="bg-white shadow-md fixed w-full z-20">
+      <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+        <!-- Logo -->
+        <a href="#" class="text-2xl font-bold text-blue-600">&lt;/&gt; A.Y Dev</a>
+        <!-- Zone droite (desktop) -->
+        <div class="hidden xl:flex items-center space-x-5">
+          <a href="#home" class="px-3 py-2 text-gray-700 hover:text-blue-600 transition">Accueil</a>
+          <a href="#about" class="px-3 py-2 text-gray-700 hover:text-blue-600 transition">À propos</a>
+          <a href="#skills" class="px-3 py-2 text-gray-700 hover:text-blue-600 transition">Compétences</a>
+          <a href="#projects" class="px-3 py-2 text-gray-700 hover:text-blue-600 transition">Projets</a>
+          <a href="#experience" class="px-3 py-2 text-gray-700 hover:text-blue-600 transition">Expérience</a>
+          <a href="#education" class="px-3 py-2 text-gray-700 hover:text-blue-600 transition">Éducation</a>
+          <a href="#contact" class="px-3 py-2 text-gray-700 hover:text-blue-600 transition">Contact</a>
+          <a href="/src/assets/files/CV_Youcef_Addou_FullStack.pdf" download class="ml-4 bg-blue-600 hover:bg-blue-900 text-white px-4 py-2 rounded-md flex items-center transition"> <i class="fas fa-download mr-2"></i> CV </a>
+          <button id="theme-toggle" class="ml-4 text-gray-700 hover:text-blue-600 transition"><i id="theme-icon" class="fas fa-moon text-xl"></i></button>
         </div>
-        <!-- Menu mobile -->
-        <button class="md:hidden focus:outline-none" id="menu-toggle">
-          <i class="fas fa-bars text-xl"></i>
-        </button>
+        <!-- Zone droite (mobile/tablette) -->
+        <div class="flex xl:hidden items-center space-x-2">
+          <button id="theme-toggle-mobile" class="text-gray-700 hover:text-blue-600 transition"><i id="theme-icon-mobile" class="fas fa-moon text-xl"></i></button>
+          <button id="menu-toggle" class="ml-2 text-gray-700 hover:text-blue-600 transition focus:outline-none"><i class="fas fa-bars text-2xl"></i></button>
+        </div>
       </div>
-
-      <!-- Contenu du menu mobile -->
-      <div class="md:hidden hidden bg-white w-full px-6 py-3" id="mobile-menu">
-        <div class="flex flex-col space-y-3">
-          <a href="#home" class="py-2 text-gray-700 hover:text-blue-600"
-            >Accueil</a
-          >
-          <a href="#about" class="py-2 text-gray-700 hover:text-blue-600"
-            >À propos</a
-          >
-          <a href="#skills" class="py-2 text-gray-700 hover:text-blue-600"
-            >Compétences</a
-          >
-          <a href="#projects" class="py-2 text-gray-700 hover:text-blue-600"
-            >Projets</a
-          >
-          <a href="#experience" class="py-2 text-gray-700 hover:text-blue-600"
-            >Expérience</a
-          >
-          <a href="#education" class="py-2 text-gray-700 hover:text-blue-600"
-            >Éducation</a
-          >
-          <a href="#contact" class="py-2 text-gray-700 hover:text-blue-600"
-            >Contact</a
-          >
-          <a
-            href="/src/assets/files/Youcef_Addou_Dev_FullStack_Alternance.pdf"
-            download
-            class="mt-2 bg-blue-600 text-white px-4 py-2 rounded-md flex items-center justify-center"
-          >
-            <i class="fas fa-download mr-2"></i> Télécharger mon CV
-          </a>
+      <!-- Menu mobile overlay -->
+      <div id="mobile-menu" class="fixed inset-0 z-40 flex flex-col items-center justify-center bg-white bg-opacity-95 transition-transform duration-300 transform translate-x-full xl:hidden">
+        <div class="flex flex-col items-center justify-center h-full space-y-6">
+          <button id="theme-toggle-mobile-menu" class="absolute top-6 right-20 text-gray-700 hover:text-blue-600 transition"><i id="theme-icon-mobile-menu" class="fas fa-moon text-xl"></i></button>
+          <button id="menu-close" class="absolute top-6 right-6 text-gray-700 hover:text-blue-600 transition text-3xl">&times;</button>
+          <a href="#home" class="text-xl py-2 text-gray-700 hover:text-blue-600 transition">Accueil</a>
+          <a href="#about" class="text-xl py-2 text-gray-700 hover:text-blue-600 transition">À propos</a>
+          <a href="#skills" class="text-xl py-2 text-gray-700 hover:text-blue-600 transition">Compétences</a>
+          <a href="#projects" class="text-xl py-2 text-gray-700 hover:text-blue-600 transition">Projets</a>
+          <a href="#experience" class="text-xl py-2 text-gray-700 hover:text-blue-600 transition">Expérience</a>
+          <a href="#education" class="text-xl py-2 text-gray-700 hover:text-blue-600 transition">Éducation</a>
+          <a href="#contact" class="text-xl py-2 text-gray-700 hover:text-blue-600 transition">Contact</a>
+          <a href="/src/assets/files/CV_Youcef_Addou_FullStack.pdf" download class="mt-4 bg-blue-600 text-white px-6 py-3 rounded-md flex items-center justify-center"><i class="fas fa-download mr-2"></i> Télécharger mon CV</a>
         </div>
       </div>
     </nav>
@@ -118,12 +61,12 @@
         class="container mx-auto px-6 flex flex-col md:flex-row items-center"
       >
         <div class="md:w-1/2 mb-10 md:mb-0">
-          <h1 class="text-4xl md:text-5xl font-bold mb-4 hero-animate">
+          <h1 class="hero-title text-3xl sm:text-4xl md:text-5xl font-bold mb-4 hero-animate break-words leading-tight max-w-full" style="word-break:break-word;overflow-wrap:break-word;">
             Youcef Addou
+            <span class="hidden xs:inline"> </span>
+            <span class="block xs:inline">DEV</span>
           </h1>
-          <h2 class="text-2xl md:text-3xl font-semibold mb-6 hero-animate">
-            Développeur Full-Stack JavaScript
-          </h2>
+          <h2 class="text-xl sm:text-2xl md:text-3xl font-semibold mb-6 hero-animate break-words leading-tight max-w-full" style="word-break:break-word;overflow-wrap:break-word;">Développeur Full-Stack JavaScript</h2>
           <p class="text-lg mb-8 hero-animate">
             Passionné par la création de solutions web innovantes et
             performantes. Actuellement en formation pour perfectionner mes
@@ -163,17 +106,14 @@
 
     <canvas id="sideCanvasLeft"></canvas>
     <canvas id="sideCanvasRight"></canvas>
-    
+
     <div class="sections-container">
       <!-- About Section -->
-      <section id="about mx-auto" class="py-16 bg-white">
+      <section id="about" class="py-16 bg-white mx-auto">
         <div class="container mx-auto px-6">
           <h2 class="text-3xl font-bold text-center mb-12">
             <div class="about-title">
-              <span>Y</span><span>O</span><span>U</span><span>C</span
-              ><span>E</span><span>F</span> <span>&nbsp;</span><span>I</span
-              ><span>S</span><span>&nbsp;</span><span>A</span
-              ><span>&nbsp;</span> <span>D</span><span>E</span><span>V</span>
+              <span>Y</span><span>O</span><span>U</span><span>C</span><span>E</span><span>F</span> <span>&nbsp;</span><span>I</span><span>S</span><span>&nbsp;</span><span>A</span><span>&nbsp;</span> <span class="about-dev-break">D</span><span class="about-dev-break">E</span><span class="about-dev-break">V</span>
             </div>
           </h2>
           <div class="flex flex-col md:flex-row items-center">
@@ -234,7 +174,7 @@
         </div>
       </section>
       <!-- Skills Section -->
-      <section id="skills mx-auto" class="py-16 bg-gray-50">
+      <section id="skills" class="py-16 bg-gray-50 mx-auto rounded-b-lg">
         <div class="container mx-auto px-16">
           <h2 class="text-3xl font-bold text-center mb-12">Mes compétences</h2>
           <div class="mb-12">
@@ -254,7 +194,13 @@
                 class="skill-badge bg-white px-6 py-3 rounded-full shadow-md flex items-center"
               >
                 <i class="fab fa-react text-blue-400 mr-2"></i>
-                <span>React (en apprentissage)</span>
+                <span>React</span>
+              </div>
+              <div
+                class="skill-badge bg-white px-6 py-3 rounded-full shadow-md flex items-center"
+              >
+                <i class="far fa-arrow-alt-circle-right text-gray-800 mr-2"></i>
+                <span>Next.js</span>
               </div>
               <div
                 class="skill-badge bg-white px-6 py-3 rounded-full shadow-md flex items-center"
@@ -390,8 +336,8 @@
         </div>
       </section>
       <!-- Projects Section -->
-      <section id="projects mx-auto" class="py-16 bg-white">
-        <div class="container mx-auto px-6">
+      <section id="projects" class="my-4 py-16 bg-white mx-auto">
+        <div class="container mx-auto">
           <h2 class="text-3xl font-bold text-center mb-12">Mes projets</h2>
           <div class="projects-carousel-container relative overflow-hidden">
             <!-- Carousel Navigation -->
@@ -428,7 +374,7 @@
                     class="h-full w-full object-cover"
                   />
                 </div>
-                <div class="bg-gray-50 p-6 rounded-b-xl">
+                <div class="bg-gray-50 mx-1 rounded-b-xl">
                   <h3 class="text-xl font-semibold mb-2">Eco-Tec Cycle</h3>
                 </div>
               </div>
@@ -447,7 +393,7 @@
                     class="h-full w-full object-cover"
                   />
                 </div>
-                <div class="bg-gray-50 p-6 rounded-b-xl">
+                <div class="bg-gray-50 mx-1 rounded-b-xl">
                   <h3 class="text-xl font-semibold mb-2">
                     Landing Page NexaDigital
                   </h3>
@@ -469,7 +415,7 @@
                     class="h-full w-full object-cover"
                   />
                 </div>
-                <div class="bg-gray-50 p-6 rounded-b-xl">
+                <div class="bg-gray-50 mx-1 rounded-b-xl">
                   <h3 class="text-xl font-semibold mb-2">
                     Formulaire de Contact
                   </h3>
@@ -490,7 +436,7 @@
                     class="h-full w-full object-cover"
                   />
                 </div>
-                <div class="bg-gray-50 p-6 rounded-b-xl">
+                <div class="bg-gray-50 mx-1 rounded-b-xl">
                   <h3 class="text-xl font-semibold mb-2">Uni-Handler</h3>
                 </div>
               </div>
@@ -509,7 +455,7 @@
                     class="h-full w-full object-cover"
                   />
                 </div>
-                <div class="bg-gray-50 p-6 rounded-b-xl">
+                <div class="bg-gray-50 mx-1 rounded-b-xl">
                   <h3 class="text-xl font-semibold mb-2">The Game of Life</h3>
                 </div>
               </div>
@@ -528,9 +474,9 @@
                     class="h-full w-full object-cover"
                   />
                 </div>
-                <div class="bg-gray-50 p-6 rounded-b-xl">
+                <div class="bg-gray-50 mx-1 rounded-b-xl">
                   <h3 class="text-xl font-semibold mb-2">
-                    Maze Cat Runner - PHP
+                    Maze Cat Runner
                   </h3>
                 </div>
               </div>
@@ -549,7 +495,7 @@
                     class="h-full w-full object-cover"
                   />
                 </div>
-                <div class="bg-gray-50 p-6 rounded-b-xl">
+                <div class="bg-gray-50 mx-1 rounded-b-xl">
                   <h3 class="text-xl font-semibold mb-2">The Hangman Game</h3>
                 </div>
               </div>
@@ -568,9 +514,9 @@
                     class="h-full w-full object-cover"
                   />
                 </div>
-                <div class="bg-gray-50 p-6 rounded-b-xl">
+                <div class="bg-gray-50 mx-1 rounded-b-xl">
                   <h3 class="text-xl font-semibold mb-2">
-                    Connect 4 (Puissance 4)
+                    Puissance 4
                   </h3>
                 </div>
               </div>
@@ -677,7 +623,7 @@
         </div>
       </section>
       <!-- Experience & Education Section -->
-      <section id="experience mx-auto" class="py-16 bg-gray-50 relative">
+      <section id="experience" class="py-16 bg-gray-50 relative mx-auto rounded-t-lg">
         <div class="container mx-auto px-6">
           <h2 class="text-3xl font-bold text-center mb-12">
             Parcours professionnel
@@ -805,7 +751,7 @@
         </div>
       </section>
       <!-- Experience & Education Section -->
-      <section id="education mx-auto" class="py-16 bg-white relative">
+      <section id="education" class="py-16 bg-white relative mx-auto">
         <div class="container mx-auto px-6">
           <h2 class="text-3xl font-bold text-center mb-12">
             Éducation et Formations
@@ -867,7 +813,7 @@
       </section>
 
       <!-- Contact Section -->
-      <section id="contact mx-auto" class="py-16 bg-gray-50">
+      <section id="contact" class="py-16 bg-gray-50 mx-auto">
         <div class="container mx-auto px-6">
           <h2 class="text-3xl font-bold text-center mb-12">Contactez-moi</h2>
 
@@ -911,7 +857,7 @@
                 </div>
                 <div class="mt-6">
                   <a
-                    href="/src/assets/files/Youcef_Addou_Dev_FullStack_Alternance.pdf"
+                    href="/src/assets/files/CV_Youcef_Addou_FullStack.pdf"
                     download="CV_Youcef_Addou_Developpeur_FullStack.pdf"
                     class="bg-blue-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300 inline-flex items-center"
                   >
@@ -936,7 +882,7 @@
                 <input
                   type="hidden"
                   name="_next"
-                  value="https://youcef-addou.netlify.app/pages/merci.html"
+                  value="/merci.html"
                 />
                 <!-- Désactive le CAPTCHA -->
                 <input type="hidden" name="_captcha" value="false" />
@@ -948,6 +894,9 @@
                     type="text"
                     id="name"
                     name="nom"
+                    pattern="^[A-Za-zÀ-ÿ' -]{2,40}$"
+                    required
+                    title="2 à 40 lettres, espaces ou tirets"
                     class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
                 </div>
@@ -960,6 +909,9 @@
                     type="email"
                     id="email"
                     name="email"
+                    pattern="^[\w-.]+@[\w-]+\.[a-zA-Z]{2,}$"
+                    required
+                    title="Adresse email valide"
                     class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
                 </div>
@@ -972,6 +924,9 @@
                     type="text"
                     id="subject"
                     name="sujet"
+                    pattern="^.{2,100}$"
+                    required
+                    title="Sujet (2 à 100 caractères)"
                     class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
                 </div>
@@ -984,6 +939,9 @@
                     id="message"
                     rows="4"
                     name="message"
+                    pattern="^.{10,1000}$"
+                    required
+                    title="Message (10 à 1000 caractères)"
                     class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                   ></textarea>
                 </div>
@@ -1047,7 +1005,10 @@
       </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-    <script type="module" src="/src/assets/javascript/animationThree.js"></script>
+    <script
+      type="module"
+      src="/src/assets/javascript/animationThree.js"
+    ></script>
     <script type="module" src="/src/assets/javascript/main.js"></script>
   </body>
 </html>
