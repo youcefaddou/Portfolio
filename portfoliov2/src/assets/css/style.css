@@ -288,6 +288,18 @@ body[data-theme="dark"] a[href="#contact"] {
   color: white;
 }
 
+body[data-theme="dark"] input,
+body[data-theme="dark"] textarea {
+  color: #f7fafc;
+  background-color: #2d3748;
+  border-color: #4a5568;
+}
+body[data-theme="dark"] input::placeholder,
+body[data-theme="dark"] textarea::placeholder {
+  color: #cbd5e0;
+  opacity: 1;
+}
+
 @media (max-width: 1024px) {
   .project-card {
     flex: 0 0 calc(33.333% - 32px);
