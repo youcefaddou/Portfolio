@@ -1,3 +1,11 @@
+import ecotecVideo from '/src/assets/videos/ecotecvideo.mp4';
+import nexadigitalVideo from '/src/assets/videos/nexadigitalvideo.mp4';
+import unihandlerVideo from '/src/assets/videos/unihandlervideo.webm';
+import gameoflifeVideo from '/src/assets/videos/gameoflifevideo.webm';
+import mazeVideo from '/src/assets/videos/maze.webm';
+import penduVideo from '/src/assets/videos/penduvideo.webm';
+import puissanceVideo from '/src/assets/videos/puissancevideo.webm';
+
 document.getElementById('menu-toggle').addEventListener('click', function () {
     const mobileMenu = document.getElementById('mobile-menu');
     mobileMenu.classList.toggle('hidden');
@@ -136,7 +144,7 @@ function initProjectsDetails() {
             ],
             demoContent: `
                 <video controls autoplay loop muted class="w-fit-content h-full object-cover rounded-xl" loading="lazy">
-                    <source src="/src/assets/videos/ecotecvideo.mp4" type="video/mp4">
+                    <source src="${ecotecVideo}" type="video/mp4">
                     Votre navigateur ne supporte pas les vidéos HTML5
                 </video>
             `,
@@ -168,7 +176,7 @@ function initProjectsDetails() {
             technologies: ["React", "TailwindCSS", "Express.js", "MySQL", "Prisma"],
             demoContent: `
                 <video controls autoplay loop muted class="w-fit-content h-full object-cover rounded-xl" loading="lazy">
-                    <source src="/src/assets/videos/nexadigitalvideo.mp4" type="video/mp4">
+                    <source src="${nexadigitalVideo}" type="video/mp4">
                     Votre navigateur ne supporte pas les vidéos HTML5
                 </video>
             `,
@@ -216,7 +224,7 @@ function initProjectsDetails() {
             technologies: ["JavaScript", "HTML5 Canvas", "CSS Animations"],
             demoContent: `
                 <video controls autoplay loop muted class="w-fit-content h-full object-cover rounded-xl" loading="lazy">
-                    <source src="/src/assets/videos/unihandlervideo.webm" type="video/webm">
+                    <source src="${unihandlerVideo}" type="video/webm">
                     Votre navigateur ne supporte pas les vidéos HTML5
                 </video>
             `,
@@ -241,7 +249,7 @@ function initProjectsDetails() {
             technologies: ["JavaScript", "HTML5 Canvas", "CSS Animations"],
             demoContent: `
                 <video controls autoplay loop muted class="w-fit-content h-full object-cover rounded-xl" loading="lazy">
-                    <source src="/src/assets/videos/gameoflifevideo.webm" type="video/webm">
+                    <source src="${gameoflifeVideo}" type="video/webm">
                     Votre navigateur ne supporte pas les vidéos HTML5
                 </video>
             `,
@@ -271,7 +279,7 @@ function initProjectsDetails() {
             technologies: ["PHP", "HTML5 Canvas", "CSS Animations"],
             demoContent: `
                 <video controls autoplay loop muted class="w-fit-content h-full object-cover rounded-xl" loading="lazy">
-                    <source src="/src/assets/videos/maze.webm" type="video/webm">
+                    <source src="${mazeVideo}" type="video/webm">
                     Votre navigateur ne supporte pas les vidéos HTML5
                 </video>
             `,
@@ -296,7 +304,7 @@ function initProjectsDetails() {
             technologies: ["JavaScript", "HTML5 Canvas", "CSS Animations"],
             demoContent: `
                 <video controls autoplay loop muted class="w-fit-content h-full object-cover rounded-xl" loading="lazy">
-                    <source src="/src/assets/videos/penduvideo.webm" type="video/webm">
+                    <source src="${penduVideo}" type="video/webm">
                     Votre navigateur ne supporte pas les vidéos HTML5
                 </video>
             `,
@@ -321,7 +329,7 @@ function initProjectsDetails() {
             technologies: ["JavaScript", "HTML5 Canvas", "CSS Animations"],
             demoContent: `
                 <video controls autoplay loop muted class="w-fit-content h-full object-cover rounded-xl" loading="lazy">
-                    <source src="/src/assets/videos/puissancevideo.webm" type="video/webm">
+                    <source src="${puissanceVideo}" type="video/webm">
                     Votre navigateur ne supporte pas les vidéos HTML5
                 </video>
             `,
