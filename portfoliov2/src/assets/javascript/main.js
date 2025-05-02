@@ -583,3 +583,44 @@ if (menuToggle) menuToggle.addEventListener('click', openMobileMenu);
 if (menuClose) menuClose.addEventListener('click', closeMobileMenu);
 mobileLinks.forEach(link => link.addEventListener('click', closeMobileMenu));
 
+// Gestion du formulaire de contact avec modale de remerciement
+const contactForm = document.querySelector('form[action^="https://formsubmit.co/"]');
+const merciModal = document.getElementById('merci-modal');
+const merciModalClose = document.getElementById('merci-modal-close');
+let lastActiveElement = null;
+
+if (contactForm && merciModal && merciModalClose) {
+    contactForm.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        const formData = new FormData(contactForm);
+        try {
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            });
+            if (response.ok) {
+                contactForm.reset();
+                lastActiveElement = document.activeElement;
+                merciModal.classList.remove('hidden');
+                merciModal.querySelector('button, [tabindex]:not([tabindex="-1"])').focus();
+            } else {
+                alert("Une erreur est survenue lors de l'envoi du message. Veuillez réessayer.");
+            }
+        } catch (err) {
+            alert("Impossible d'envoyer le message. Veuillez vérifier votre connexion internet.");
+        }
+    });
+    function closeMerciModal() {
+        merciModal.classList.add('hidden');
+        if (lastActiveElement) lastActiveElement.focus();
+    }
+    merciModalClose.addEventListener('click', closeMerciModal);
+    merciModal.addEventListener('click', function(e) {
+        if (e.target === merciModal) closeMerciModal();
+    });
+    document.addEventListener('keydown', function(e) {
+        if (!merciModal.classList.contains('hidden') && e.key === 'Escape') closeMerciModal();
+    });
+}
+
