@@ -151,6 +151,42 @@ function initCoverflowCarousel() {
 
 function initProjectsDetails() {
     const projects = {
+        9: {
+            title: "ChronoFlow",
+            description: "Mini SaaS moderne pour la gestion de la productivité et du temps. Organisez vos tâches, synchronisez avec Google Calendar, gérez vos abonnements et profitez d'une expérience fluide et sécurisée.",
+            features: [
+                "Authentification sécurisée (Google OAuth, NextAuth.js)",
+                "Synchronisation bidirectionnelle avec Google Calendar",
+                "Gestion des tâches, projets et deadlines en temps réel",
+                "Abonnements et paiements intégrés via Stripe",
+                "Interface responsive et moderne avec TailwindCSS",
+                "Dashboard analytique (statistiques, graphiques, export PDF)",
+                "Support multilingue (i18next, react-i18next)",
+                "Déploiement cloud (Vercel) et base de données MongoDB"
+            ],
+            technologies: [
+                "React", "Node.js", "TailwindCSS", "Stripe", "Google Auth", "Google Calendar API", "MongoDB", "Vite", "Vercel"
+            ],
+            demoContent: `
+        <video controls autoplay loop muted class="w-fit-content h-full object-cover rounded-xl" loading="lazy">
+            <source src="/src/assets/videos/Chronoflow.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas les vidéos HTML5
+        </video>
+    `,
+            demoBg: "bg-red-100 bg-opacity-10",
+            links: [
+                {
+                    url: "https://github.com/youcefaddou/chrono",
+                    icon: "fab fa-github",
+                    text: "Code"
+                },
+                {
+                    url: "https://chronoflow.xyz/",
+                    icon: "fas fa-external-link-alt",
+                    text: "Démo"
+                }
+            ]
+        },
         8: {
             title: "Eco-Tec Cycle",
             description: "Plateforme web éco-responsable pour sensibiliser, localiser et encourager le recyclage des équipements électroniques. Authentification sécurisée, carte interactive, animations modernes et suivi d'impact utilisateur.",
@@ -546,7 +582,7 @@ function animateHeroSection() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    
+
     initCoverflowCarousel();
     initProjectsDetails();
     initTimeline();
@@ -616,10 +652,10 @@ if (contactForm && merciModal && merciModalClose) {
         if (lastActiveElement) lastActiveElement.focus();
     }
     merciModalClose.addEventListener('click', closeMerciModal);
-    merciModal.addEventListener('click', function(e) {
+    merciModal.addEventListener('click', function (e) {
         if (e.target === merciModal) closeMerciModal();
     });
-    document.addEventListener('keydown', function(e) {
+    document.addEventListener('keydown', function (e) {
         if (!merciModal.classList.contains('hidden') && e.key === 'Escape') closeMerciModal();
     });
 }
