@@ -169,7 +169,7 @@ function initProjectsDetails() {
             ],
             demoContent: `
         <video controls autoplay loop muted class="w-fit-content h-full object-cover rounded-xl" loading="lazy">
-            <source src="/src/assets/videos/Chronoflow.mp4" type="video/mp4">
+            <source src="/src/assets/videos/chronoflow.mp4" type="video/mp4">
             Votre navigateur ne supporte pas les vidéos HTML5
         </video>
     `,
